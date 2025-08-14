@@ -1,0 +1,86 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizlilik Sözleşmesi - Düğün Servisi</title>
+    <meta name="description" content="Düğün Servisi gizlilik sözleşmesi ve kişisel verilerin korunması hakkında bilgilendirme.">
+    @Html.Action("Head", "Partial")
+</head>
+<body>
+    <!-- Header -->
+    @Html.Action("Header", "Partial")
+
+    <!-- Content Section -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-header">
+                <h1>Gizlilik Sözleşmesi</h1>
+                <p>Son güncelleme: Aralık 2024</p>
+            </div>
+
+            <div class="legal-body">
+                <h2>1. Giriş</h2>
+                <p>Düğün Servisi olarak, müşterilerimizin gizliliğini korumaya büyük önem vermekteyiz. Bu gizlilik sözleşmesi, web sitemizi ziyaret ettiğinizde veya hizmetlerimizi kullandığınızda toplanan bilgilerin nasıl kullanıldığını açıklamaktadır.</p>
+
+                <h2>2. Toplanan Bilgiler</h2>
+                <p>Web sitemizi ziyaret ettiğinizde aşağıdaki bilgiler toplanabilir:</p>
+                <ul>
+                    <li><strong>Kişisel Bilgiler:</strong> Ad, soyad, telefon numarası, e-posta adresi</li>
+                    <li><strong>İletişim Bilgileri:</strong> Adres bilgileri</li>
+                    <li><strong>Hizmet Bilgileri:</strong> Talep ettiğiniz hizmet türü ve detayları</li>
+                    <li><strong>Teknik Bilgiler:</strong> IP adresi, tarayıcı türü, işletim sistemi</li>
+                </ul>
+
+                <h2>3. Bilgilerin Kullanım Amacı</h2>
+                <p>Topladığımız bilgiler aşağıdaki amaçlarla kullanılmaktadır:</p>
+                <ul>
+                    <li>Hizmet taleplerinizi karşılamak</li>
+                    <li>Müşteri hizmetleri sunmak</li>
+                    <li>İletişim kurmak</li>
+                    <li>Hizmet kalitesini artırmak</li>
+                    <li>Yasal yükümlülükleri yerine getirmek</li>
+                </ul>
+
+                <h2>4. Bilgi Paylaşımı</h2>
+                <p>Kişisel bilgileriniz aşağıdaki durumlar dışında üçüncü taraflarla paylaşılmaz:</p>
+                <ul>
+                    <li>Yasal zorunluluklar</li>
+                    <li>Hizmet sağlayıcılarımızla (sadece gerekli bilgiler)</li>
+                    <li>Açık rızanızın bulunması</li>
+                </ul>
+
+                <h2>5. Bilgi Güvenliği</h2>
+                <p>Kişisel bilgilerinizin güvenliği bizim için çok önemlidir. Bu nedenle:</p>
+                <ul>
+                    <li>Güvenli sunucular kullanıyoruz</li>
+                    <li>Şifreleme teknolojileri uyguluyoruz</li>
+                    <li>Düzenli güvenlik güncellemeleri yapıyoruz</li>
+                    <li>Çalışanlarımıza gizlilik eğitimi veriyoruz</li>
+                </ul>
+
+                <h2>6. Çerezler</h2>
+                <p>Web sitemizde çerezler kullanılmaktadır. Çerezler hakkında detaylı bilgi için <a href="~/Home/CerezPolitikasi">Çerez Politikası</a> sayfamızı ziyaret edebilirsiniz.</p>
+
+                <h2>7. İletişim</h2>
+                <p>Gizlilik sözleşmemiz hakkında sorularınız için aşağıdaki iletişim kanallarından bize ulaşabilirsiniz:</p>
+                <div class="contact-info">
+                    <p><strong>E-posta:</strong> mkucukguzel.18@gmail.com</p>
+                    <p><strong>Telefon:</strong> 0(538) 898 28 37</p>
+                    <p><strong>Adres:</strong> İstanbul/Türkiye</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    @Html.Action("Footer", "Partial")
+
+    <script src="~/dugunservisi/dugunservisi.js"></script>
+</body>
+</html> 

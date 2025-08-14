@@ -24,19 +24,21 @@ namespace Servisaracim.Controllers
         {
             return View();
         }
-        public ActionResult Araclar()
-        {
-            return View();
-        }
-        public ActionResult Araclar1()
-        {
-            return View();
-        }
-        public ActionResult Araclar2()
-        {
-            return View();
-        }
         public ActionResult Hakkimizda()
+        {
+            return View();
+        }
+
+        public ActionResult KVKK()
+        {
+            return View();
+        }
+        public ActionResult CerezPolitikasi()
+        {
+            return View();
+        }
+
+        public ActionResult Gizlilik()
         {
             return View();
         }
@@ -44,5 +46,7 @@ namespace Servisaracim.Controllers
         {
             return PartialView();
         }
+
+
     }
 }

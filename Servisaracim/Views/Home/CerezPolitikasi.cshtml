@@ -1,0 +1,105 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çerez Politikası - Düğün Servisi</title>
+    <meta name="description" content="Düğün Servisi çerez politikası ve web sitesinde kullanılan çerezler hakkında bilgilendirme.">
+    @Html.Action("Head", "Partial")
+</head>
+<body>
+    <!-- Header -->
+    @Html.Action("Header", "Partial")
+
+    <!-- Content Section -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-header">
+                <h1>Çerez Politikası</h1>
+                <p>Son güncelleme: Aralık 2024</p>
+            </div>
+
+            <div class="legal-body">
+                <h2>1. Çerez Nedir?</h2>
+                <p>Çerezler (cookies), web sitemizi ziyaret ettiğinizde tarayıcınız tarafından cihazınıza kaydedilen küçük metin dosyalarıdır. Bu dosyalar, web sitesinin daha iyi çalışmasını sağlar ve kullanıcı deneyimini iyileştirir.</p>
+
+                <h2>2. Çerezlerin Kullanım Amacı</h2>
+                <p>Web sitemizde çerezler aşağıdaki amaçlarla kullanılmaktadır:</p>
+                <ul>
+                    <li><strong>Zorunlu Çerezler:</strong> Web sitesinin temel işlevlerinin çalışması için gerekli</li>
+                    <li><strong>Performans Çerezleri:</strong> Site performansını artırmak ve kullanıcı deneyimini iyileştirmek</li>
+                    <li><strong>Fonksiyonel Çerezler:</strong> Kullanıcı tercihlerini hatırlamak</li>
+                    <li><strong>Analitik Çerezler:</strong> Site kullanım istatistiklerini toplamak</li>
+                    <li><strong>Pazarlama Çerezleri:</strong> Reklam ve pazarlama faaliyetleri için</li>
+                </ul>
+
+                <h2>3. Kullandığımız Çerez Türleri</h2>
+
+                <h3>3.1 Zorunlu Çerezler</h3>
+                <p>Bu çerezler web sitesinin çalışması için kesinlikle gereklidir ve devre dışı bırakılamaz:</p>
+                <ul>
+                    <li><strong>Session Çerezleri:</strong> Oturum bilgilerini saklar</li>
+                    <li><strong>Güvenlik Çerezleri:</strong> Güvenlik kontrollerini sağlar</li>
+                    <li><strong>Form Çerezleri:</strong> Form verilerini geçici olarak saklar</li>
+                </ul>
+
+                <h3>3.2 Performans Çerezleri</h3>
+                <p>Site performansını artırmak için kullanılır:</p>
+                <ul>
+                    <li><strong>Önbellek Çerezleri:</strong> Sayfa yükleme hızını artırır</li>
+                    <li><strong>CDN Çerezleri:</strong> İçerik dağıtım ağı optimizasyonu</li>
+                </ul>
+
+                <h3>3.3 Fonksiyonel Çerezler</h3>
+                <p>Kullanıcı deneyimini iyileştirmek için kullanılır:</p>
+                <ul>
+                    <li><strong>Dil Tercihi:</strong> Seçtiğiniz dil ayarını hatırlar</li>
+                    <li><strong>Tema Tercihi:</strong> Görsel tema seçiminizi saklar</li>
+                    <li><strong>Form Verileri:</strong> Form doldururken yazdığınız bilgileri geçici olarak saklar</li>
+                </ul>
+
+                <h2>4. Çerez Yönetimi</h2>
+                <p>Çerezleri yönetmek için aşağıdaki seçenekleriniz bulunmaktadır:</p>
+                <ul>
+                    <li><strong>Tarayıcı Ayarları:</strong> Tarayıcınızın ayarlarından çerezleri devre dışı bırakabilir veya silebilirsiniz</li>
+                    <li><strong>Çerez Uyarıları:</strong> Web sitemizde çerez kullanımı hakkında bilgilendirme yapıyoruz</li>
+                    <li><strong>Seçici Onay:</strong> Zorunlu olmayan çerezler için onayınızı alıyoruz</li>
+                </ul>
+
+                <h2>5. Üçüncü Taraf Çerezler</h2>
+                <p>Web sitemizde aşağıdaki üçüncü taraf hizmetlerin çerezleri kullanılmaktadır:</p>
+                <ul>
+                    <li><strong>Google Analytics:</strong> Site kullanım istatistikleri için</li>
+                    <li><strong>Google Fonts:</strong> Web fontları için</li>
+                    <li><strong>Font Awesome:</strong> İkonlar için</li>
+                </ul>
+
+                <h2>6. Çerez Süreleri</h2>
+                <p>Çerezlerin saklanma süreleri türlerine göre değişmektedir:</p>
+                <ul>
+                    <li><strong>Session Çerezleri:</strong> Tarayıcı kapatıldığında silinir</li>
+                    <li><strong>Kalıcı Çerezler:</strong> Belirlenen süre boyunca saklanır (genellikle 1-2 yıl)</li>
+                    <li><strong>Analitik Çerezler:</strong> 26 ay boyunca saklanır</li>
+                </ul>
+
+                <h2>7. İletişim</h2>
+                <p>Çerez politikamız hakkında sorularınız için aşağıdaki iletişim kanallarından bize ulaşabilirsiniz:</p>
+                <div class="contact-info">
+                    <p><strong>E-posta:</strong> mkucukguzel.18@gmail.com</p>
+                    <p><strong>Telefon:</strong> 0(538) 898 28 37</p>
+                    <p><strong>Adres:</strong> İstanbul/Türkiye</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    @Html.Action("Footer", "Partial")
+
+    <script src="~/dugunservisi/dugunservisi.js"></script>
+</body>
+</html> 

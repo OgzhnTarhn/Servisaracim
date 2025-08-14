@@ -190,7 +190,6 @@
     <Content Include="dugunservisi\images\team-3.jpg" />
     <Content Include="dugunservisi\images\vip-minibus-hero.jpg" />
     <Content Include="dugunservisi\images\was.jpg" />
-    <Content Include="dugunservisi\kvkk.html" />
     <Content Include="dugunservisi\mercedes-sprinter.html" />
     <Content Include="dugunservisi\mercedes-travego.html" />
     <Content Include="dugunservisi\otokar-sultan.html" />
@@ -248,6 +247,9 @@
     <Content Include="Views\Araclar\MercedesSprinter.cshtml" />
     <Content Include="Views\Araclar\OtokarSultan.cshtml" />
     <Content Include="Views\Araclar\FiatDucato.cshtml" />
+    <Content Include="Views\Home\KVKK.cshtml" />
+    <Content Include="Views\Home\CerezPolitikasi.cshtml" />
+    <Content Include="Views\Home\Gizlilik.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

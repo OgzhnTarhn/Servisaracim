@@ -1,0 +1,86 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KVKK - Düğün Servisi</title>
+    <meta name="description" content="Düğün Servisi KVKK (Kişisel Verilerin Korunması Kanunu) politikası ve bilgilendirme metni.">
+    @Html.Action("Head", "Partial")
+</head>
+<body>
+    <!-- Header -->
+    @Html.Action("Header", "Partial")
+
+    <!-- Content Section -->
+    <section class="legal-content">
+        <div class="container">
+            <div class="legal-header">
+                <h1>Kişisel Verilerin Korunması Kanunu (KVKK)</h1>
+                <p>Son güncelleme: Aralık 2024</p>
+            </div>
+
+            <div class="legal-body">
+                <h2>1. Veri Sorumlusu</h2>
+                <p>Düğün Servisi olarak, kişisel verilerinizin güvenliği konusunda azami hassasiyet göstermekteyiz. Bu politika, 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında veri sorumlusu sıfatıyla şirketimizin kişisel verileri işleme faaliyetlerini açıklamaktadır.</p>
+
+                <h2>2. Kişisel Verilerin İşlenme Amaçları</h2>
+                <p>Kişisel verileriniz aşağıdaki amaçlarla işlenmektedir:</p>
+                <ul>
+                    <li>Araç kiralama hizmetlerimizin sunulması</li>
+                    <li>Müşteri ilişkilerinin yönetimi</li>
+                    <li>İletişim faaliyetlerinin gerçekleştirilmesi</li>
+                    <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+                    <li>Güvenliğin sağlanması</li>
+                </ul>
+
+                <h2>3. İşlenen Kişisel Veri Kategorileri</h2>
+                <p>İşlenen kişisel veri kategorileri şunlardır:</p>
+                <ul>
+                    <li>Kimlik bilgileri (ad, soyad, TC kimlik numarası)</li>
+                    <li>İletişim bilgileri (telefon, e-posta, adres)</li>
+                    <li>Müşteri işlem bilgileri</li>
+                    <li>İşlem güvenliği bilgileri</li>
+                    <li>Fiziksel mekân güvenliği bilgileri</li>
+                </ul>
+
+                <h2>4. Kişisel Verilerin Aktarılması</h2>
+                <p>Kişisel verileriniz, yukarıda belirtilen amaçların gerçekleştirilmesi doğrultusunda aşağıdaki taraflara aktarılabilecektir:</p>
+                <ul>
+                    <li>Yasal yükümlülükler kapsamında yetkili kamu kurum ve kuruluşları</li>
+                    <li>Hizmet aldığımız tedarikçiler ve iş ortakları</li>
+                    <li>Yasal süreçler kapsamında mahkemeler ve icra müdürlükleri</li>
+                </ul>
+
+                <h2>5. Kişisel Veri Sahibinin Hakları</h2>
+                <p>6698 sayılı KVKK'nın 11. maddesi uyarınca herkes, veri sorumlusuna başvurarak kendisiyle ilgili olarak;</p>
+                <ul>
+                    <li>Kişisel veri işlenip işlenmediğini öğrenme</li>
+                    <li>Kişisel verileri işlenmişse buna ilişkin bilgi talep etme</li>
+                    <li>Kişisel verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+                    <li>Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme</li>
+                    <li>Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</li>
+                    <li>KVKK'nın 7. maddesinde öngörülen şartlar çerçevesinde kişisel verilerin silinmesini veya yok edilmesini isteme</li>
+                </ul>
+
+                <h2>6. İletişim</h2>
+                <p>KVKK kapsamındaki haklarınızı kullanmak için aşağıdaki iletişim kanallarından bize ulaşabilirsiniz:</p>
+                <div class="contact-info">
+                    <p><strong>E-posta:</strong> mkucukguzel.18@gmail.com</p>
+                    <p><strong>Telefon:</strong> 0(538) 898 28 37</p>
+                    <p><strong>Adres:</strong> İstanbul/Türkiye</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    @Html.Action("Footer", "Partial")
+
+    <script src="~/dugunservisi/dugunservisi.js"></script>
+</body>
+</html> 
