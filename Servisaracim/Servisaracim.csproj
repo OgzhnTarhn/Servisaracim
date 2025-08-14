@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AraclarController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HizmetlerimizController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -234,8 +235,6 @@
     <Content Include="Views\Partial\Head.cshtml" />
     <Content Include="Views\Partial\Header.cshtml" />
     <Content Include="Views\Partial\FooterHizmetlerimiz.cshtml" />
-    <Content Include="Views\Home\Araclar.cshtml" />
-    <Content Include="Views\Home\Araclar1.cshtml" />
     <Content Include="Views\Home\Araclar2.cshtml" />
     <Content Include="Views\Blog\BlogKurumsalEtkinlik.cshtml" />
     <Content Include="Views\Blog\BlogOzelTurlar.cshtml" />
@@ -246,6 +245,9 @@
     <Content Include="Views\Hizmetlerimiz\PersonelTasimaciligi.cshtml" />
     <Content Include="Views\Hizmetlerimiz\MinibusKiralama.cshtml" />
     <Content Include="Views\Hizmetlerimiz\VipTasimacilik.cshtml" />
+    <Content Include="Views\Araclar\MercedesSprinter.cshtml" />
+    <Content Include="Views\Araclar\OtokarSultan.cshtml" />
+    <Content Include="Views\Araclar\FiatDucato.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

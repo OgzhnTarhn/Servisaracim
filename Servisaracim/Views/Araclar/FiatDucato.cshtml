@@ -1,4 +1,3 @@
-﻿
 @{
     Layout = null;
 }
@@ -6,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+    <meta charset="utf-8" />
     @Html.Action("Head", "Partial")
 </head>
 <body>
@@ -15,12 +15,12 @@
     <!-- Hero Section -->
     <section class="hero vehicle-hero">
         <div class="hero-bg">
-            <img src="~/dugunservisi/images/sprinter.png" alt="Mercedes Sprinter">
+            <img src="~/dugunservisi/images/ducato.png" alt="Fiat Ducato">
         </div>
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Mercedes Sprinter</h1>
+                <h1 class="hero-title">Fiat Ducato</h1>
                 <p class="hero-subtitle">Konforlu ve güvenli yolculuk için profesyonel çözüm</p>
                 <div class="hero-buttons">
                     <a href="#details" class="btn btn-primary">Detayları Gör</a>
@@ -41,14 +41,14 @@
                             <i class="fas fa-users"></i>
                             <div>
                                 <h4>Kapasite</h4>
-                                <p>16 Kişi</p>
+                                <p>16-20 Kişi</p>
                             </div>
                         </div>
                         <div class="spec-item">
                             <i class="fas fa-calendar"></i>
                             <div>
                                 <h4>Model Yılı</h4>
-                                <p>2022</p>
+                                <p>2023</p>
                             </div>
                         </div>
                         <div class="spec-item">
@@ -71,11 +71,11 @@
 
                     <div class="description">
                         <h3>Araç Açıklaması</h3>
-                        <p>Mercedes Sprinter, konforlu iç paneli ve akıllı asistanlarıyla her an güven veren profesyonel bir iş ortağı olmaya geliyor. Modern tasarımı ve gelişmiş teknolojileri ile yolcularınıza en iyi deneyimi sunar.</p>
+                        <p>Fiat Ducato, konforlu iç paneli ve akıllı asistanlarıyla her an güven veren profesyonel bir iş ortağı olmaya geliyor. Modern tasarımı ve gelişmiş teknolojileri ile yolcularınıza en iyi deneyimi sunar.</p>
 
                         <h4>Öne Çıkan Özellikler:</h4>
                         <ul>
-                            <li>16 kişilik konforlu kapasite</li>
+                            <li>16-20 kişilik konforlu kapasite</li>
                             <li>Güçlü klima sistemi</li>
                             <li>Ücretsiz WiFi bağlantısı</li>
                             <li>USB şarj noktaları</li>
@@ -114,6 +114,7 @@
                                     <option value="1-5">1-5 Kişi</option>
                                     <option value="6-10">6-10 Kişi</option>
                                     <option value="11-16">11-16 Kişi</option>
+                                    <option value="17-20">17-20 Kişi</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary btn-full">
@@ -152,23 +153,23 @@
             <div class="vehicles-grid">
                 <div class="vehicle-card">
                     <div class="vehicle-image">
-                        <img src="~/dugunservisi/images/otogar.png" alt="Otokar Sultan S">
+                        <img src="~/dugunservisi/images/sprinter.png" alt="Mercedes Sprinter">
                     </div>
                     <div class="vehicle-content">
-                        <h3>Otokar Sultan S</h3>
-                        <p>28 kişilik konforlu araç</p>
-                        <a href="otokar-sultan.html" class="vehicle-link">İncele</a>
+                        <h3>Mercedes Sprinter</h3>
+                        <p>16 kişilik konforlu araç</p>
+                        <a href="~/Araclar/MercedesSprinter" class="vehicle-link">İncele</a>
                     </div>
                 </div>
 
                 <div class="vehicle-card">
                     <div class="vehicle-image">
-                        <img src="~/dugunservisi/images/ducato.png" alt="Fiat Ducato">
+                        <img src="~/dugunservisi/images/otogar.png" alt="Otokar Sultan S">
                     </div>
                     <div class="vehicle-content">
-                        <h3>Fiat Ducato</h3>
-                        <p>18 kişilik lüks araç</p>
-                        <a href="mercedes-travego.html" class="vehicle-link">İncele</a>
+                        <h3>Otokar Sultan S</h3>
+                        <p>28 kişilik konforlu araç</p>
+                        <a href="~/Araclar/OtokarSultan" class="vehicle-link">İncele</a>
                     </div>
                 </div>
             </div>
@@ -176,9 +177,9 @@
     </section>
 
     <!-- Footer -->
-    @Html.Action("FooterHizmetlerimiz", "Partial")
+    @Html.Action("Footer", "Partial")
 
     <script src="~/dugunservisi/dugunservisi.js"></script>
 
 </body>
-</html> 
+</html>

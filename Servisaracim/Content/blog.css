@@ -95,7 +95,6 @@
     background: #f8f9fa;
     margin-bottom: 3rem;
     overflow: hidden;
-    position: relative;
 }
 
 .hero-image img {
@@ -228,7 +227,6 @@
 
 .contact-info i {
     margin-right: 0.5rem;
-    color: #667eea;
 }
 
 /* Responsive Design */

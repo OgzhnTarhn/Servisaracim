@@ -1,4 +1,6 @@
-﻿/* Reset and Base Styles */
+﻿@charset "UTF-8";
+
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
