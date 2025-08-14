@@ -1,83 +1,19 @@
+﻿
+@{
+    Layout = null;
+}
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Minibüs Kiralama İstanbul | VIP Minibüs Kiralama | Avrupa Yakası</title>
-    <meta name="title" content="Minibüs Kiralama İstanbul | VIP Minibüs Kiralama | Avrupa Yakası">
-    <meta name="description" content="İstanbul Avrupa yakasında minibüs kiralama. VIP minibüs, geniş iç hacimli minibüsler ile düğün, nişan, kına, gezi organizasyonları. Profesyonel şoförler. 0539 669 78 50">
-    <meta name="keywords" content="minibüs kiralama, VIP minibüs, İstanbul minibüs kiralama, Avrupa yakası minibüs, düğün minibüsü, nişan minibüsü, kına minibüsü, gezi minibüsü, organizasyon minibüsü, şirket minibüsü, okul minibüsü, havalimanı transfer minibüs">
-    <meta name="author" content="Düğün Servisi">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="Turkish">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://dugunservisi.com/minibus-kiralama.html">
-    <meta property="og:title" content="Minibüs Kiralama İstanbul | VIP Minibüs Kiralama | Avrupa Yakası">
-    <meta property="og:description" content="İstanbul Avrupa yakasında minibüs kiralama. VIP minibüs, geniş iç hacimli minibüsler ile düğün, nişan, kına, gezi organizasyonları.">
-    <meta property="og:image" content="https://dugunservisi.com/images/minibus-hero.jpg">
-    <meta property="og:site_name" content="Düğün Servisi">
-    <meta property="og:locale" content="tr_TR">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://dugunservisi.com/minibus-kiralama.html">
-    <meta property="twitter:title" content="Minibüs Kiralama İstanbul | VIP Minibüs Kiralama | Avrupa Yakası">
-    <meta property="twitter:description" content="İstanbul Avrupa yakasında minibüs kiralama. VIP minibüs, geniş iç hacimli minibüsler ile düğün, nişan, kına, gezi organizasyonları.">
-    <meta property="twitter:image" content="https://dugunservisi.com/images/minibus-hero.jpg">
-    
-    <!-- Additional SEO Meta Tags -->
-    <meta name="geo.region" content="TR-34">
-    <meta name="geo.placename" content="İstanbul">
-    <meta name="geo.position" content="41.0082;28.9784">
-    <meta name="ICBM" content="41.0082, 28.9784">
-    <meta name="theme-color" content="#2563eb">
-    <meta name="msapplication-TileColor" content="#2563eb">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://dugunservisi.com/minibus-kiralama.html">
-    
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
+    <title>Personel Taşımacılığı - Düğün Servisi</title>
+    <meta name="description" content="İstanbul'da personel taşımacılığı hizmeti. Şirketler için güvenli ve düzenli personel taşımacılığı çözümleri sunuyoruz.">
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="dugunservisi.css">
+    <link rel="stylesheet" href="~/dugunservisi/dugunservisi.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Structured Data / JSON-LD -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Minibüs Kiralama",
-        "description": "İstanbul Avrupa yakasında VIP minibüs kiralama hizmeti",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "Düğün Servisi",
-            "telephone": "+905396697850",
-            "email": "yssaadacekod@gmail.com",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "İstanbul",
-                "addressRegion": "Avrupa Yakası",
-                "addressCountry": "TR"
-            }
-        },
-        "areaServed": "İstanbul Avrupa Yakası",
-        "serviceType": "Minibüs Kiralama",
-        "category": "Transportation Service",
-        "offers": {
-            "@type": "Offer",
-            "description": "VIP minibüs kiralama, düğün, nişan, kına, gezi organizasyonları için"
-        }
-    }
-    </script>
 </head>
 <body>
     <!-- Header -->
@@ -90,32 +26,32 @@
                     </div>
                     <span class="logo-text">Düğün Servisi</span>
                 </div>
-                
+
                 <div class="nav-menu" id="nav-menu">
-                    <a href="dugunservisi.html" class="nav-link">Ana Sayfa</a>
-                    <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                    <a href="~/Home/Index" class="nav-link">Ana Sayfa</a>
+                    <a href="~/Home/Hakkimizda" class="nav-link">Hakkımızda</a>
                     <div class="nav-dropdown">
                         <a href="#" class="nav-link active">Hizmetlerimiz <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
-                            <a href="servis-kiralama.html">Servis Kiralama</a>
-                            <a href="minibus-kiralama.html" class="active">Minibüs Kiralama</a>
-                            <a href="otobus-kiralama.html">Otobüs Kiralama</a>
-                            <a href="personel-tasimaciligi.html">Personel Taşımacılığı</a>
-                            <a href="vip-minibus.html">VIP Minibüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/Serviskiralama">Servis Kiralama</a>
+                            <a href="~/Hizmetlerimiz/MinibusKiralama">Minibüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/OtobüsKiralama">Otobüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/PersonelTasimaciligi" class="active">Personel Taşımacılığı</a>
+                            <a href="~/Hizmetlerimiz/VipTasimacilik">VIP Taşımacılık</a>
                         </div>
                     </div>
-                    <a href="sss.html" class="nav-link">SSS</a>
-                    <a href="blog.html" class="nav-link">Blog</a>
-                    <a href="iletisim.html" class="nav-link">İletişim</a>
+                    <a href="~/Home/Index#faq" class="nav-link">SSS</a>
+                    <a href="~/Home/Index#blog" class="nav-link">Blog</a>
+                    <a href="~/Home/Index#iletisim" class="nav-link">İletişim</a>
                 </div>
-                
+
                 <div class="nav-contact">
                     <a href="tel:05396697850" class="phone-number">
                         <i class="fas fa-phone"></i>
                         0(539) 669 78 50
                     </a>
                 </div>
-                
+
                 <div class="nav-toggle" id="nav-toggle">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -130,11 +66,11 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Minibüs Kiralama<br>
+                    Personel Taşımacılığı<br>
                     Hizmeti
                 </h1>
                 <p class="hero-description">
-                    Geniş iç hacme sahip minibüsler ile organizasyonlarınız için ulaşım problemlerini çözünüz. Şöförlü minibüs kiralama hizmetleri hakkında detaylı bilgi almak için bizimle iletişime geçin.
+                    Şirketlerin personel taşımacılığı ihtiyaçlarını karşılamak için güvenli ve düzenli servis hizmetleri sunuyoruz. Sabit hatlar ve özel rotalar ile personelinizi güvenle taşıyoruz.
                 </p>
                 <div class="hero-buttons">
                     <a href="#teklif" class="btn btn-primary">Hemen Teklif Al</a>
@@ -142,7 +78,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/minibus-hero.jpg" alt="Minibüs Kiralama" class="hero-img">
+                <img src="images/personel-hero.jpg" alt="Personel Taşımacılığı" class="hero-img">
             </div>
         </div>
     </section>
@@ -152,34 +88,36 @@
         <div class="container">
             <div class="service-content">
                 <div class="service-info">
-                    <h2>Minibüs Kiralama Hizmetimiz</h2>
+                    <h2>Personel Taşımacılığı Hizmetimiz</h2>
                     <p>
-                        Minibüs kiralama hizmetimiz ile organizasyonlarınız için güvenli ve konforlu ulaşım çözümleri sunuyoruz. Deneyimli şoförlerimiz ve bakımlı araçlarımız ile her türlü etkinliğinizde yanınızdayız.
+                        Personel taşımacılığı hizmetimiz ile şirketlerin personel ulaşım ihtiyaçlarını karşılıyoruz. Sabit hatlar, vardiyalı çalışma saatlerine uygun servisler ve özel rotalar ile personelinizi güvenle taşıyoruz.
                     </p>
-                    
-                    <h3>Minibüs Kiralama Avantajları</h3>
+
+                    <h3>Personel Taşımacılığı Avantajları</h3>
                     <ul>
-                        <li>Geniş iç hacim ve konforlu koltuklar</li>
-                        <li>Profesyonel şoför kadrosu</li>
-                        <li>Klima ve modern donanımlar</li>
-                        <li>Esnek kiralama süreleri</li>
+                        <li>Sabit hatlar ve düzenli seferler</li>
+                        <li>Vardiyalı çalışma saatlerine uygun servisler</li>
+                        <li>Güvenli ve konforlu araçlar</li>
+                        <li>Deneyimli şoför kadrosu</li>
                         <li>Sigorta ve kasko dahil</li>
                         <li>7/24 müşteri hizmetleri</li>
+                        <li>Esnek rota planlaması</li>
+                        <li>Raporlama ve takip sistemi</li>
                     </ul>
                 </div>
-                
+
                 <div class="service-features">
                     <h3>Hizmet Kapsamımız</h3>
                     <div class="features-grid">
                         <div class="feature-item">
-                            <i class="fas fa-users"></i>
-                            <h4>Kapasite</h4>
-                            <p>16-20 kişilik minibüsler</p>
+                            <i class="fas fa-building"></i>
+                            <h4>Şirket Servisleri</h4>
+                            <p>Sabit hatlar ve özel rotalar</p>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-clock"></i>
-                            <h4>Çalışma Saatleri</h4>
-                            <p>7/24 hizmet</p>
+                            <h4>Vardiyalı Servis</h4>
+                            <p>7/24 personel taşımacılığı</p>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-map-marked-alt"></i>
@@ -202,11 +140,11 @@
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info">
-                    <h2 class="contact-title">Minibüs Kiralama Teklifi Alın</h2>
+                    <h2 class="contact-title">Personel Taşımacılığı Teklifi Alın</h2>
                     <p class="contact-description">
-                        Minibüs kiralama hizmetimiz hakkında detaylı bilgi almak ve fiyat teklifi için bizimle iletişime geçin.
+                        Personel taşımacılığı hizmetimiz hakkında detaylı bilgi almak ve fiyat teklifi için bizimle iletişime geçin.
                     </p>
-                    
+
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -222,35 +160,40 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Adınız Soyadınız" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <input type="tel" name="phone" class="form-control" placeholder="Telefon Numaranız" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <input type="email" name="email" class="form-control" placeholder="E-posta Adresiniz">
                         </div>
-                        
+
+                        <div class="form-group">
+                            <input type="text" name="company" class="form-control" placeholder="Şirket Adı">
+                        </div>
+
                         <div class="form-group">
                             <select name="service" class="form-control" required>
                                 <option value="">Hizmet Seçiniz</option>
-                                <option value="minibus" selected>Minibüs Kiralama</option>
+                                <option value="personel" selected>Personel Taşımacılığı</option>
                                 <option value="servis">Servis Kiralama</option>
+                                <option value="minibus">Minibüs Kiralama</option>
                                 <option value="otobus">Otobüs Kiralama</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
                             <textarea name="message" class="form-control" placeholder="Detaylarınızı yazın..." rows="5" maxlength="500"></textarea>
                             <div class="char-count">0 / 500</div>
                         </div>
-                        
+
                         <button type="submit" class="btn btn-primary">Teklif Al</button>
                     </form>
                 </div>
@@ -265,12 +208,14 @@
                 <div class="footer-section">
                     <h3>Hizmetlerimiz</h3>
                     <ul>
-                        <li><a href="servis-kiralama.html">Servis Kiralama</a></li>
-                        <li><a href="minibus-kiralama.html">Minibüs Kiralama</a></li>
-                        <li><a href="otobus-kiralama.html">Otobüs Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/Serviskiralama">Servis Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/MinibusKiralama">Minibüs Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/OtobüsKiralama">Otobüs Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/PersonelTasimaciligi">Personel Taşımacılığı</a></li>
+                        <li><a href="~/Hizmetlerimiz/VipTasimacilik">VIP Taşımacılık</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>İletişim</h3>
                     <ul>
@@ -279,16 +224,16 @@
                         <li><i class="fas fa-envelope"></i> info@dugunservisi.com</li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Kurumsal</h3>
                     <ul>
-                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                        <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="~/Home/Hakkimizda">Hakkımızda</a></li>
+                        <li><a href="~/Home/Index#faq">Sıkça Sorulan Sorular</a></li>
+                        <li><a href="~/Blog/BlogOzelTurlar">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Telefon</h3>
                     <div class="phone-number">0(539) 669 78 50</div>
@@ -297,19 +242,19 @@
                     </p>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <p>&copy; 2024 Düğün Servisi. Created by Kadir Teke</p>
                     <div class="footer-links">
-                        <a href="kvkk.html">KVKK</a>
-                        <a href="gizlilik.html">Gizlilik Sözleşmesi</a>
-                        <a href="cerez-politikasi.html">Çerez Politikası</a>
+                        <a href="~/Home/Kvkk">KVKK</a>
+                        <a href="~/Home/Gizlilik">Gizlilik Sözleşmesi</a>
+                        <a href="~/Home/CerezPolitikasi">Çerez Politikası</a>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Admin Panel Link -->
         <div class="admin-link">
             <a href="admin.html" title="Admin Panel">
@@ -325,6 +270,6 @@
         </a>
     </div>
 
-    <script src="dugunservisi.js"></script>
+    <script src="~/dugunservisi/dugunservisi.js"></script>
 </body>
 </html> 

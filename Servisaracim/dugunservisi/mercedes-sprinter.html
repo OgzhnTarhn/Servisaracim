@@ -3,15 +3,406 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercedes Sprinter - Düğün Servisi</title>
-    <meta name="description" content="Mercedes Sprinter araç detayları ve kiralama bilgileri">
+    <title>Mercedes Sprinter - Servis Kiralama | Servis Aracım</title>
+    <meta name="description" content="Mercedes Sprinter ile konforlu ve güvenli yolculuk. 16 kişilik kapasite, klima, WiFi ve profesyonel şoför. Hemen rezervasyon yapın!">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Styles -->
     <link rel="stylesheet" href="dugunservisi.css">
+    
+    <style>
+        /* Mercedes Sprinter Özel Stilleri */
+        
+        /* Header Stilleri */
+        .header {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .nav-brand a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .nav-brand img {
+            height: 40px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-brand a:hover img {
+            transform: scale(1.1);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 2rem;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: #495057;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: #007bff;
+            background: rgba(0, 123, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .nav-toggle {
+                display: flex;
+            }
+        }
+        
+        .vehicle-hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vehicle-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/sprinter.png') no-repeat center right;
+            background-size: contain;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffffff, #e3f2fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #e3f2fd;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .spec-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid #dee2e6;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .spec-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #007bff;
+        }
+        
+        .spec-item i {
+            font-size: 2rem;
+            color: #007bff;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .spec-item h4 {
+            color: #495057;
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+        }
+        
+        .spec-item p {
+            color: #6c757d;
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .booking-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+        
+        .booking-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .booking-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #e3f2fd;
+        }
+        
+        .booking-form input,
+        .booking-form select {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.9);
+            color: #495057;
+            font-size: 1rem;
+        }
+        
+        .btn-full {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-full:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            margin-top: 2rem;
+            box-shadow: 0 20px 40px rgba(240, 147, 251, 0.3);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(5px);
+        }
+        
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .vehicle-gallery {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .features-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .feature-item i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #e3f2fd;
+        }
+        
+        .feature-item h4 {
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -20,8 +411,8 @@
             <nav class="navbar">
                 <div class="nav-brand">
                     <a href="dugunservisi.html">
-                        <i class="fas fa-car"></i>
-                        <span>Düğün Servisi</span>
+                        <img src="images/dugunservisi-logo.png" alt="Servis Aracım Logo" style="height: 40px; width: auto;">
+                        <span>Servis Aracım</span>
                     </a>
                 </div>
                 
@@ -34,6 +425,12 @@
                     </li>
                     <li class="nav-item">
                         <a href="servis-kiralama.html" class="nav-link">Servis Kiralama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="minibus-kiralama.html" class="nav-link">Minibüs Kiralama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="otobus-kiralama.html" class="nav-link">Otobüs Kiralama</a>
                     </li>
                     <li class="nav-item">
                         <a href="iletisim.html" class="nav-link">İletişim</a>
@@ -51,17 +448,13 @@
 
     <!-- Hero Section -->
     <section class="hero vehicle-hero">
-        <div class="hero-bg">
-            <img src="images/mercedes-sprinter.jpg" alt="Mercedes Sprinter">
-        </div>
-        <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Mercedes Sprinter</h1>
                 <p class="hero-subtitle">Konforlu ve güvenli yolculuk için profesyonel çözüm</p>
                 <div class="hero-buttons">
                     <a href="#details" class="btn btn-primary">Detayları Gör</a>
-                    <a href="tel:05396697850" class="btn btn-secondary">Hemen Ara</a>
+                    <a href="tel:05388982837" class="btn btn-secondary">Hemen Ara</a>
                 </div>
             </div>
         </div>
@@ -177,19 +570,82 @@
                         <div class="contact-info">
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
-                                <a href="tel:05396697850">0(539) 669 78 50</a>
+                                <a href="tel:05388982837">0(538) 898 28 37</a>
                             </div>
                             <div class="contact-item">
                                 <i class="fab fa-whatsapp"></i>
-                                <a href="https://wa.me/905396697850" target="_blank">WhatsApp</a>
+                                <a href="https://wa.me/905388982837" target="_blank">WhatsApp</a>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
-                                <a href="mailto:info@dugunservisi.com">info@dugunservisi.com</a>
+                                <a href="mailto:info@servisaracim.com">info@servisaracim.com</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Neden Mercedes Sprinter?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Güvenlik</h4>
+                    <p>En yüksek güvenlik standartları ile korunmuş araç</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-couch"></i>
+                    <h4>Konfor</h4>
+                    <p>Deri koltuklar ve geniş iç mekan ile maksimum konfor</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-snowflake"></i>
+                    <h4>Klima</h4>
+                    <p>Güçlü klima sistemi ile her mevsimde ideal sıcaklık</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-wifi"></i>
+                    <h4>Bağlantı</h4>
+                    <p>Ücretsiz WiFi ve USB şarj noktaları</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Gallery -->
+    <section class="vehicle-gallery">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Araç Görselleri</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/sprinter.png" alt="Mercedes Sprinter Dış Görünüm">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/mercedes-sprinter.jpg" alt="Mercedes Sprinter İç Mekan">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sprinter.png" alt="Mercedes Sprinter Detay">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Hemen Rezervasyon Yapın!</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Mercedes Sprinter ile unutulmaz bir yolculuk deneyimi yaşayın</p>
+            <div class="cta-buttons">
+                <a href="tel:05388982837" class="btn btn-primary">
+                    <i class="fas fa-phone"></i> Hemen Ara
+                </a>
+                <a href="https://wa.me/905388982837" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
             </div>
         </div>
     </section>
@@ -229,7 +685,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Düğün Servisi</h3>
+                    <h3>Servis Aracım</h3>
                     <p>Güvenli ve konforlu yolculuk için profesyonel çözümler sunuyoruz.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -252,15 +708,15 @@
                 <div class="footer-section">
                     <h3>İletişim</h3>
                     <ul>
-                        <li><i class="fas fa-phone"></i> 0(539) 669 78 50</li>
-                        <li><i class="fas fa-envelope"></i> info@dugunservisi.com</li>
+                        <li><i class="fas fa-phone"></i> 0(538) 898 28 37</li>
+                        <li><i class="fas fa-envelope"></i> info@servisaracim.com</li>
                         <li><i class="fas fa-map-marker-alt"></i> İstanbul/Türkiye</li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Düğün Servisi. Tüm hakları saklıdır.</p>
+                <p>&copy; 2024 Servis Aracım. Tüm hakları saklıdır.</p>
                 <div class="footer-links">
                     <a href="kvkk.html">KVKK</a>
                     <a href="gizlilik.html">Gizlilik</a>
@@ -272,7 +728,7 @@
 
     <!-- WhatsApp Button -->
     <div class="whatsapp-button">
-        <a href="https://wa.me/905396697850" target="_blank">
+        <a href="https://wa.me/905388982837" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>

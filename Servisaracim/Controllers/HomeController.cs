@@ -36,18 +36,6 @@ namespace Servisaracim.Controllers
         {
             return View();
         }
-        public ActionResult BlogOzelTurlar()
-        {
-            return View();
-        }
-        public ActionResult BlogDugunMisafir()
-        {
-            return View();
-        }
-        public ActionResult BlogKurumsalEtkinlik()
-        {
-            return View();
-        }
         public ActionResult Hakkimizda()
         {
             return View();

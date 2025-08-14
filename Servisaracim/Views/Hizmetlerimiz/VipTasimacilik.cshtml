@@ -1,3 +1,8 @@
+﻿
+@{
+    Layout = null;
+}
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -5,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIP Minibüs Kiralama - Düğün Servisi</title>
     <meta name="description" content="İstanbul'da VIP minibüs kiralama hizmeti. Lüks ve konforlu VIP minibüsler ile özel etkinliklerinizde fark yaratın.">
-    <link rel="stylesheet" href="dugunservisi.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="~/dugunservisi/dugunservisi.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -20,32 +26,32 @@
                     </div>
                     <span class="logo-text">Düğün Servisi</span>
                 </div>
-                
+
                 <div class="nav-menu" id="nav-menu">
-                    <a href="dugunservisi.html" class="nav-link">Ana Sayfa</a>
-                    <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                    <a href="~/Home/Index" class="nav-link">Ana Sayfa</a>
+                    <a href="~/Home/Hakkimizda" class="nav-link">Hakkımızda</a>
                     <div class="nav-dropdown">
                         <a href="#" class="nav-link active">Hizmetlerimiz <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
-                            <a href="servis-kiralama.html">Servis Kiralama</a>
-                            <a href="minibus-kiralama.html">Minibüs Kiralama</a>
-                            <a href="otobus-kiralama.html">Otobüs Kiralama</a>
-                            <a href="personel-tasimaciligi.html">Personel Taşımacılığı</a>
-                            <a href="vip-minibus.html" class="active">VIP Minibüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/Serviskiralama">Servis Kiralama</a>
+                            <a href="~/Hizmetlerimiz/MinibusKiralama">Minibüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/OtobüsKiralama">Otobüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/PersonelTasimaciligi">Personel Taşımacılığı</a>
+                            <a href="~/Hizmetlerimiz/VipTasimacilik" class="active">VIP Taşımacılık</a>
                         </div>
                     </div>
-                    <a href="sss.html" class="nav-link">SSS</a>
-                    <a href="blog.html" class="nav-link">Blog</a>
-                    <a href="iletisim.html" class="nav-link">İletişim</a>
+                    <a href="~/Home/Index#faq" class="nav-link">SSS</a>
+                    <a href="~/Home/Index#blog" class="nav-link">Blog</a>
+                    <a href="~/Home/Index#iletisim" class="nav-link">İletişim</a>
                 </div>
-                
+
                 <div class="nav-contact">
                     <a href="tel:05396697850" class="phone-number">
                         <i class="fas fa-phone"></i>
                         0(539) 669 78 50
                     </a>
                 </div>
-                
+
                 <div class="nav-toggle" id="nav-toggle">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -86,7 +92,7 @@
                     <p>
                         VIP minibüs kiralama hizmetimiz ile özel etkinliklerinizde lüks ve konforu bir arada sunuyoruz. Düğün, nişan, kına ve diğer özel organizasyonlarınız için premium araçlar ve profesyonel hizmet.
                     </p>
-                    
+
                     <h3>VIP Minibüs Avantajları</h3>
                     <ul>
                         <li>Lüks iç donanım ve konforlu koltuklar</li>
@@ -99,7 +105,7 @@
                         <li>Özel rota planlaması</li>
                     </ul>
                 </div>
-                
+
                 <div class="service-features">
                     <h3>Hizmet Kapsamımız</h3>
                     <div class="features-grid">
@@ -138,7 +144,7 @@
                     <p class="contact-description">
                         VIP minibüs kiralama hizmetimiz hakkında detaylı bilgi almak ve fiyat teklifi için bizimle iletişime geçin.
                     </p>
-                    
+
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -154,21 +160,21 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Adınız Soyadınız" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <input type="tel" name="phone" class="form-control" placeholder="Telefon Numaranız" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <input type="email" name="email" class="form-control" placeholder="E-posta Adresiniz">
                         </div>
-                        
+
                         <div class="form-group">
                             <select name="service" class="form-control" required>
                                 <option value="">Hizmet Seçiniz</option>
@@ -178,12 +184,12 @@
                                 <option value="otobus">Otobüs Kiralama</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
                             <textarea name="message" class="form-control" placeholder="Detaylarınızı yazın..." rows="5" maxlength="500"></textarea>
                             <div class="char-count">0 / 500</div>
                         </div>
-                        
+
                         <button type="submit" class="btn btn-primary">Teklif Al</button>
                     </form>
                 </div>
@@ -198,12 +204,14 @@
                 <div class="footer-section">
                     <h3>Hizmetlerimiz</h3>
                     <ul>
-                        <li><a href="servis-kiralama.html">Servis Kiralama</a></li>
-                        <li><a href="minibus-kiralama.html">Minibüs Kiralama</a></li>
-                        <li><a href="otobus-kiralama.html">Otobüs Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/Serviskiralama">Servis Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/MinibusKiralama">Minibüs Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/OtobüsKiralama">Otobüs Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/PersonelTasimaciligi">Personel Taşımacılığı</a></li>
+                        <li><a href="~/Hizmetlerimiz/VipTasimacilik">VIP Taşımacılık</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>İletişim</h3>
                     <ul>
@@ -212,16 +220,16 @@
                         <li><i class="fas fa-envelope"></i> info@dugunservisi.com</li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Kurumsal</h3>
                     <ul>
-                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                        <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="~/Home/Hakkimizda">Hakkımızda</a></li>
+                        <li><a href="~/Home/Index#faq">Sıkça Sorulan Sorular</a></li>
+                        <li><a href="~/Blog/BlogOzelTurlar">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Telefon</h3>
                     <div class="phone-number">0(539) 669 78 50</div>
@@ -230,19 +238,19 @@
                     </p>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <p>&copy; 2024 Düğün Servisi. Created by Kadir Teke</p>
                     <div class="footer-links">
-                        <a href="kvkk.html">KVKK</a>
-                        <a href="gizlilik.html">Gizlilik Sözleşmesi</a>
-                        <a href="cerez-politikasi.html">Çerez Politikası</a>
+                        <a href="~/Home/Kvkk">KVKK</a>
+                        <a href="~/Home/Gizlilik">Gizlilik Sözleşmesi</a>
+                        <a href="~/Home/CerezPolitikasi">Çerez Politikası</a>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Admin Panel Link -->
         <div class="admin-link">
             <a href="admin.html" title="Admin Panel">
@@ -258,6 +266,6 @@
         </a>
     </div>
 
-    <script src="dugunservisi.js"></script>
+    <script src="~/dugunservisi/dugunservisi.js"></script>
 </body>
 </html> 

@@ -120,6 +120,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\HizmetlerimizController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartialController.cs" />
     <Compile Include="Global.asax.cs">
@@ -190,16 +192,11 @@
     <Content Include="dugunservisi\kvkk.html" />
     <Content Include="dugunservisi\mercedes-sprinter.html" />
     <Content Include="dugunservisi\mercedes-travego.html" />
-    <Content Include="dugunservisi\minibus-kiralama.html" />
-    <Content Include="dugunservisi\otobus-kiralama.html" />
     <Content Include="dugunservisi\otokar-sultan.html" />
-    <Content Include="dugunservisi\personel-tasimaciligi.html" />
     <Content Include="dugunservisi\robots.txt" />
-    <Content Include="dugunservisi\servis-kiralama.html" />
     <Content Include="dugunservisi\sitemap.xml" />
     <Content Include="dugunservisi\sss.html" />
     <Content Include="dugunservisi\styleservice.css" />
-    <Content Include="dugunservisi\vip-minibus.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -240,10 +237,15 @@
     <Content Include="Views\Home\Araclar.cshtml" />
     <Content Include="Views\Home\Araclar1.cshtml" />
     <Content Include="Views\Home\Araclar2.cshtml" />
-    <Content Include="Views\Home\BlogKurumsalEtkinlik.cshtml" />
-    <Content Include="Views\Home\BlogOzelTurlar.cshtml" />
-    <Content Include="Views\Home\BlogDugunMisafir.cshtml" />
+    <Content Include="Views\Blog\BlogKurumsalEtkinlik.cshtml" />
+    <Content Include="Views\Blog\BlogOzelTurlar.cshtml" />
+    <Content Include="Views\Blog\BlogDugunMisafir.cshtml" />
     <Content Include="Views\Home\Hakkimizda.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\ServisKiralama.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\OtobüsKiralama.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\PersonelTasimaciligi.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\MinibusKiralama.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\VipTasimacilik.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

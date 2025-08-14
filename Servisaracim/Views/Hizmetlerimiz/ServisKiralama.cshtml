@@ -1,9 +1,14 @@
+﻿
+@{
+    Layout = null;
+}
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>Servis Kiralama İstanbul | Düğün, Nişan, Kına Servisi | Avrupa Yakası</title>
     <meta name="title" content="Servis Kiralama İstanbul | Düğün, Nişan, Kına Servisi | Avrupa Yakası">
@@ -12,7 +17,7 @@
     <meta name="author" content="Düğün Servisi">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Turkish">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dugunservisi.com/servis-kiralama.html">
@@ -21,14 +26,14 @@
     <meta property="og:image" content="https://dugunservisi.com/images/contact-hero.jpg">
     <meta property="og:site_name" content="Düğün Servisi">
     <meta property="og:locale" content="tr_TR">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://dugunservisi.com/servis-kiralama.html">
     <meta property="twitter:title" content="Servis Kiralama İstanbul | Düğün, Nişan, Kına Servisi | Avrupa Yakası">
     <meta property="twitter:description" content="İstanbul Avrupa yakasında servis kiralama. Düğün, nişan, kına, gezi, tur, şirket etkinlikleri için profesyonel servis kiralama hizmeti.">
     <meta property="twitter:image" content="https://dugunservisi.com/images/contact-hero.jpg">
-    
+
     <!-- Additional SEO Meta Tags -->
     <meta name="geo.region" content="TR-34">
     <meta name="geo.placename" content="İstanbul">
@@ -36,34 +41,34 @@
     <meta name="ICBM" content="41.0082, 28.9784">
     <meta name="theme-color" content="#2563eb">
     <meta name="msapplication-TileColor" content="#2563eb">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://dugunservisi.com/servis-kiralama.html">
-    
+
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
+
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="dugunservisi.css">
+    <link rel="stylesheet" href="~/dugunservisi/dugunservisi.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Structured Data / JSON-LD -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Service",
+        "@@context": "https://schema.org",
+        "@@type": "Service",
         "name": "Servis Kiralama",
         "description": "İstanbul Avrupa yakasında düğün, nişan, kına, gezi, tur, şirket etkinlikleri için profesyonel servis kiralama hizmeti",
         "provider": {
-            "@type": "LocalBusiness",
+            "@@type": "LocalBusiness",
             "name": "Düğün Servisi",
             "telephone": "+905396697850",
             "email": "yssaadacekod@gmail.com",
             "address": {
-                "@type": "PostalAddress",
+                "@@type": "PostalAddress",
                 "addressLocality": "İstanbul",
                 "addressRegion": "Avrupa Yakası",
                 "addressCountry": "TR"
@@ -73,7 +78,7 @@
         "serviceType": "Servis Kiralama",
         "category": "Transportation Service",
         "offers": {
-            "@type": "Offer",
+            "@@type": "Offer",
             "description": "Düğün, nişan, kına, gezi, tur, şirket etkinlikleri için servis kiralama"
         }
     }
@@ -90,32 +95,32 @@
                     </div>
                     <span class="logo-text">Düğün Servisi</span>
                 </div>
-                
+
                 <div class="nav-menu" id="nav-menu">
-                    <a href="dugunservisi.html" class="nav-link">Ana Sayfa</a>
-                    <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                    <a href="~/Home/Index" class="nav-link">Ana Sayfa</a>
+                    <a href="~/Home/Hakkimizda" class="nav-link">Hakkımızda</a>
                     <div class="nav-dropdown">
                         <a href="#" class="nav-link active">Hizmetlerimiz <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-content">
-                            <a href="servis-kiralama.html" class="active">Servis Kiralama</a>
-                            <a href="minibus-kiralama.html">Minibüs Kiralama</a>
-                            <a href="otobus-kiralama.html">Otobüs Kiralama</a>
-                            <a href="personel-tasimaciligi.html">Personel Taşımacılığı</a>
-                            <a href="vip-minibus.html">VIP Minibüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/Serviskiralama" class="active">Servis Kiralama</a>
+                            <a href="~/Hizmetlerimiz/MinibusKiralama">Minibüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/OtobüsKiralama">Otobüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/PersonelTasimaciligi">Personel Taşımacılığı</a>
+                            <a href="~/Hizmetlerimiz/VipTasimacilik">VIP Taşımacılık</a>
                         </div>
                     </div>
-                    <a href="sss.html" class="nav-link">SSS</a>
-                    <a href="blog.html" class="nav-link">Blog</a>
-                    <a href="iletisim.html" class="nav-link">İletişim</a>
+                    <a href="~/Home/Index#faq" class="nav-link">SSS</a>
+                    <a href="~/Home/Index#blog" class="nav-link">Blog</a>
+                    <a href="~/Home/Index#iletisim" class="nav-link">İletişim</a>
                 </div>
-                
+
                 <div class="nav-contact">
                     <a href="tel:05396697850" class="phone-number">
                         <i class="fas fa-phone"></i>
                         0(539) 669 78 50
                     </a>
                 </div>
-                
+
                 <div class="nav-toggle" id="nav-toggle">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -148,7 +153,7 @@
                 <div class="service-info">
                     <h2>Servis Kiralama Hizmetimiz</h2>
                     <p>Düğün Servisi olarak, özel günlerinizde ve organizasyonlarınızda ulaşım ihtiyaçlarınızı karşılamak için kapsamlı servis kiralama hizmeti sunuyoruz. Deneyimli şoför kadromuz ve modern araç filomuzla, güvenli ve konforlu bir yolculuk deneyimi yaşatıyoruz.</p>
-                    
+
                     <h3>Servis Kiralama Hizmetlerimiz:</h3>
                     <ul>
                         <li>Düğün servisi kiralama</li>
@@ -160,7 +165,7 @@
                         <li>Havalimanı transfer servisi</li>
                         <li>Şehirler arası servis kiralama</li>
                     </ul>
-                    
+
                     <h3>Servis Kiralama Avantajlarımız:</h3>
                     <ul>
                         <li>Profesyonel ve deneyimli şoförler</li>
@@ -173,7 +178,7 @@
                         <li>Bekleme süresi dahil</li>
                     </ul>
                 </div>
-                
+
                 <div class="service-image">
                     <img src="images/servis-kiralama.jpg" alt="Servis Kiralama" class="service-img">
                 </div>
@@ -188,7 +193,7 @@
                 <h2>Servis Kiralama Özelliklerimiz</h2>
                 <p>Kaliteli hizmet anlayışımızla fark yaratıyoruz</p>
             </div>
-            
+
             <div class="features-grid">
                 <div class="feature-item">
                     <div class="feature-icon">
@@ -197,7 +202,7 @@
                     <h4>Güvenlik</h4>
                     <p>Tüm araçlarımız düzenli bakım ve kontrol süreçlerinden geçer. Güvenlik standartlarına uygun araçlarla hizmet veriyoruz.</p>
                 </div>
-                
+
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-clock"></i>
@@ -205,7 +210,7 @@
                     <h4>Zamanında Hizmet</h4>
                     <p>Belirlenen saatte araçlarımız hazır olur. Zamanında hizmet anlayışımızla müşteri memnuniyetini sağlıyoruz.</p>
                 </div>
-                
+
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-users"></i>
@@ -213,7 +218,7 @@
                     <h4>Deneyimli Şoförler</h4>
                     <p>Uzun yıllar deneyime sahip, profesyonel şoförlerimizle güvenli ve konforlu yolculuk sağlıyoruz.</p>
                 </div>
-                
+
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-car"></i>
@@ -221,7 +226,7 @@
                     <h4>Modern Araçlar</h4>
                     <p>Yeni model, temiz ve bakımlı araçlarımızla konforlu bir yolculuk deneyimi sunuyoruz.</p>
                 </div>
-                
+
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-phone"></i>
@@ -229,7 +234,7 @@
                     <h4>7/24 Destek</h4>
                     <p>Müşteri hizmetlerimiz 7/24 hizmetinizdedir. Herhangi bir sorunuzda bize ulaşabilirsiniz.</p>
                 </div>
-                
+
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-money-bill-wave"></i>
@@ -248,7 +253,7 @@
                 <h2>Servis Kiralama İçin İletişim</h2>
                 <p>Hemen teklif alın ve rezervasyon yaptırın</p>
             </div>
-            
+
             <div class="contact-info-grid">
                 <div class="contact-info-card">
                     <div class="contact-icon">
@@ -258,7 +263,7 @@
                     <p>Servis kiralama için hemen arayın</p>
                     <a href="tel:05396697850" class="contact-link">0(539) 669 78 50</a>
                 </div>
-                
+
                 <div class="contact-info-card">
                     <div class="contact-icon">
                         <i class="fab fa-whatsapp"></i>
@@ -267,7 +272,7 @@
                     <p>Hızlı mesaj gönderin</p>
                     <a href="https://wa.me/905396697850" class="contact-link" target="_blank">WhatsApp'tan Yazın</a>
                 </div>
-                
+
                 <div class="contact-info-card">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
@@ -276,7 +281,7 @@
                     <p>Detaylı bilgi için yazın</p>
                     <a href="mailto:info@dugunservisi.com" class="contact-link">info@dugunservisi.com</a>
                 </div>
-                
+
                 <div class="contact-info-card">
                     <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
@@ -286,7 +291,7 @@
                     <a href="iletisim.html" class="contact-link">İstanbul/Türkiye</a>
                 </div>
             </div>
-            
+
             <div class="contact-note">
                 <p><strong>Not:</strong> Servis kiralama için en az 24 saat önceden rezervasyon yaptırmanızı öneririz. Özel günlerde yoğunluk yaşanabileceği için erken rezervasyon önemlidir.</p>
             </div>
@@ -300,14 +305,14 @@
                 <div class="footer-section">
                     <h3>Hizmetlerimiz</h3>
                     <ul>
-                        <li><a href="servis-kiralama.html">Servis Kiralama</a></li>
-                        <li><a href="minibus-kiralama.html">Minibüs Kiralama</a></li>
-                        <li><a href="otobus-kiralama.html">Otobüs Kiralama</a></li>
-                        <li><a href="personel-tasimaciligi.html">Personel Taşımacılığı</a></li>
-                        <li><a href="vip-minibus.html">VIP Minibüs Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/Serviskiralama">Servis Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/MinibusKiralama">Minibüs Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/OtobüsKiralama">Otobüs Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/PersonelTasimaciligi">Personel Taşımacılığı</a></li>
+                        <li><a href="~/Hizmetlerimiz/VipTasimacilik">VIP Taşımacılık</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>İletişim</h3>
                     <ul>
@@ -316,16 +321,16 @@
                         <li><i class="fas fa-envelope"></i> info@dugunservisi.com</li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Kurumsal</h3>
                     <ul>
-                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                        <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="~/Home/Hakkimizda">Hakkımızda</a></li>
+                        <li><a href="~/Home/Index#faq">Sıkça Sorulan Sorular</a></li>
+                        <li><a href="~/Blog/BlogOzelTurlar">Blog</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Telefon</h3>
                     <div class="phone-number">0(539) 669 78 50</div>
@@ -334,7 +339,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <p>&copy; 2024 Düğün Servisi. Created by Kadir Teke</p>
@@ -346,7 +351,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Admin Panel Link -->
         <div class="admin-link">
             <a href="admin.html" title="Admin Panel">
@@ -362,6 +367,6 @@
         </a>
     </div>
 
-    <script src="dugunservisi.js"></script>
+    <script src="~/dugunservisi/dugunservisi.js"></script>
 </body>
 </html> 
