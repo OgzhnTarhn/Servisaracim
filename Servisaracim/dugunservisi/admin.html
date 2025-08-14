@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Düğün Servisi Admin Panel</title>
+    <meta name="description" content="Düğün Servisi Admin Panel - İçerik yönetimi">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-container">
+            <div class="login-header">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <span class="logo-text">Düğün Servisi</span>
+                </div>
+                <h1>Admin Panel</h1>
+                <p>İçerik yönetimi için giriş yapın</p>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">Kullanıcı Adı</label>
+                    <input type="text" id="username" name="username" placeholder="admin" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" name="password" placeholder="Şifrenizi girin" required>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Giriş Yap
+                </button>
+            </form>
+            
+            <div class="login-help">
+                <p><i class="fas fa-info-circle"></i> Giriş Bilgileri:</p>
+                <p><strong>Admin:</strong> admin / admin123</p>
+                <p><strong>Yönetici:</strong> yonetici / yonetici123</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-panel hidden">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-left">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <span class="logo-text">Düğün Servisi Admin</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="theme-toggle" id="themeToggle">
+                    <span class="theme-icon" id="darkIcon">🌙</span>
+                    <span class="theme-icon hidden" id="lightIcon">☀️</span>
+                </div>
+                <div class="current-user-info">
+                    <span id="currentUserName">Admin</span>
+                    <div class="user-avatar" id="currentUserAvatar">👨‍💼</div>
+                </div>
+                <button id="logoutBtn" class="btn btn-outline">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Çıkış
+                </button>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3>Ana Yönetim</h3>
+                    <ul>
+                        <li>
+                            <a href="#dashboard" class="nav-link active" data-section="dashboard">
+                                <i class="fas fa-tachometer-alt"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#content" class="nav-link" data-section="content">
+                                <i class="fas fa-edit"></i>
+                                İçerik Yönetimi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h3>Sayfa Yönetimi</h3>
+                    <ul>
+                        <li>
+                            <a href="#hero" class="nav-link" data-section="hero">
+                                <i class="fas fa-home"></i>
+                                Ana Sayfa Hero
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services" class="nav-link" data-section="services">
+                                <i class="fas fa-bus"></i>
+                                Hizmetler
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#vehicles" class="nav-link" data-section="vehicles">
+                                <i class="fas fa-car"></i>
+                                Araç Filosu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#team" class="nav-link" data-section="team">
+                                <i class="fas fa-users"></i>
+                                Ekip
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#blog" class="nav-link" data-section="blog">
+                                <i class="fas fa-blog"></i>
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#faq" class="nav-link" data-section="faq">
+                                <i class="fas fa-question-circle"></i>
+                                SSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-section">
+                    <h3>İletişim & Ayarlar</h3>
+                    <ul>
+                        <li>
+                            <a href="#contact" class="nav-link" data-section="contact">
+                                <i class="fas fa-phone"></i>
+                                İletişim Bilgileri
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#settings" class="nav-link" data-section="settings">
+                                <i class="fas fa-cog"></i>
+                                Site Ayarları
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <div class="section-header">
+                    <h2>Dashboard</h2>
+                    <p>Düğün Servisi yönetim paneli</p>
+                </div>
+                
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Toplam Araç</h3>
+                            <p class="stat-number">50+</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Mutlu Müşteri</h3>
+                            <p class="stat-number">1000+</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Yıllık Deneyim</h3>
+                            <p class="stat-number">20+</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>7/24 Hizmet</h3>
+                            <p class="stat-number">24/7</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quick-actions">
+                    <h3>Hızlı İşlemler</h3>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="showSection('hero')">
+                            <i class="fas fa-edit"></i>
+                            Hero Düzenle
+                        </button>
+                        <button class="btn btn-secondary" onclick="showSection('services')">
+                            <i class="fas fa-bus"></i>
+                            Hizmet Ekle
+                        </button>
+                        <button class="btn btn-success" onclick="showSection('contact')">
+                            <i class="fas fa-phone"></i>
+                            İletişim Güncelle
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hero Section -->
+            <section id="hero" class="content-section">
+                <div class="section-header">
+                    <h2>Ana Sayfa Hero Bölümü</h2>
+                    <p>Ana sayfa hero bölümünü düzenleyin</p>
+                </div>
+                
+                <form id="heroForm" class="content-form">
+                    <div class="form-group">
+                        <label for="heroTitle">Ana Başlık</label>
+                        <input type="text" id="heroTitle" name="heroTitle" value="Lüks Araçlar, Uygun Fiyat, Profesyonel Şoförler" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="heroDescription">Açıklama</label>
+                        <textarea id="heroDescription" name="heroDescription" rows="3" required>Deneyimli şoför kadromuz sayesinde her yere daha hızlı ulaşım sağlayın.</textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="heroImage">Hero Görseli</label>
+                        <input type="file" id="heroImage" name="heroImage" accept="image/*">
+                        <small>Önerilen boyut: 800x600px</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="primaryButtonText">Birincil Buton Metni</label>
+                        <input type="text" id="primaryButtonText" name="primaryButtonText" value="Hemen Teklif Al" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="secondaryButtonText">İkincil Buton Metni</label>
+                        <input type="text" id="secondaryButtonText" name="secondaryButtonText" value="Hakkımızda" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i>
+                        Kaydet
+                    </button>
+                </form>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="content-section">
+                <div class="section-header">
+                    <h2>Hizmetler Yönetimi</h2>
+                    <p>Hizmetlerinizi düzenleyin ve yeni hizmet ekleyin</p>
+                </div>
+                
+                <div class="content-actions">
+                    <button class="btn btn-primary" onclick="addNewService()">
+                        <i class="fas fa-plus"></i>
+                        Yeni Hizmet Ekle
+                    </button>
+                </div>
+                
+                <div class="services-list" id="servicesList">
+                    <!-- Services will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Vehicles Section -->
+            <section id="vehicles" class="content-section">
+                <div class="section-header">
+                    <h2>Araç Filosu Yönetimi</h2>
+                    <p>Araç filonuzu düzenleyin</p>
+                </div>
+                
+                <div class="content-actions">
+                    <button class="btn btn-primary" onclick="addNewVehicle()">
+                        <i class="fas fa-plus"></i>
+                        Yeni Araç Ekle
+                    </button>
+                </div>
+                
+                <div class="vehicles-list" id="vehiclesList">
+                    <!-- Vehicles will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section id="team" class="content-section">
+                <div class="section-header">
+                    <h2>Ekip Yönetimi</h2>
+                    <p>Ekip üyelerinizi düzenleyin</p>
+                </div>
+                
+                <div class="content-actions">
+                    <button class="btn btn-primary" onclick="addNewTeamMember()">
+                        <i class="fas fa-plus"></i>
+                        Yeni Ekip Üyesi Ekle
+                    </button>
+                </div>
+                
+                <div class="team-list" id="teamList">
+                    <!-- Team members will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section id="blog" class="content-section">
+                <div class="section-header">
+                    <h2>Blog Yönetimi</h2>
+                    <p>Blog yazılarınızı düzenleyin</p>
+                </div>
+                
+                <div class="content-actions">
+                    <button class="btn btn-primary" onclick="addNewBlogPost()">
+                        <i class="fas fa-plus"></i>
+                        Yeni Blog Yazısı
+                    </button>
+                </div>
+                
+                <div class="blog-list" id="blogList">
+                    <!-- Blog posts will be loaded here -->
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="content-section">
+                <div class="section-header">
+                    <h2>SSS Yönetimi</h2>
+                    <p>Sıkça sorulan soruları düzenleyin</p>
+                </div>
+                
+                <div class="content-actions">
+                    <button class="btn btn-primary" onclick="addNewFAQ()">
+                        <i class="fas fa-plus"></i>
+                        Yeni Soru Ekle
+                    </button>
+                </div>
+                
+                <div class="faq-list" id="faqList">
+                    <!-- FAQ items will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="content-section">
+                <div class="section-header">
+                    <h2>İletişim Bilgileri</h2>
+                    <p>İletişim bilgilerinizi güncelleyin</p>
+                </div>
+                
+                <form id="contactForm" class="content-form">
+                    <div class="form-group">
+                        <label for="contactPhone">Telefon</label>
+                        <input type="tel" id="contactPhone" name="contactPhone" value="0(539) 669 78 50" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactEmail">E-posta</label>
+                        <input type="email" id="contactEmail" name="contactEmail" value="info@dugunservisi.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactAddress">Adres</label>
+                        <textarea id="contactAddress" name="contactAddress" rows="3" required>İstanbul/Türkiye</textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="whatsappNumber">WhatsApp Numarası</label>
+                        <input type="tel" id="whatsappNumber" name="whatsappNumber" value="905396697850" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i>
+                        Kaydet
+                    </button>
+                </form>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="content-section">
+                <div class="section-header">
+                    <h2>Site Ayarları</h2>
+                    <p>Genel site ayarlarını düzenleyin</p>
+                </div>
+                
+                <form id="settingsForm" class="content-form">
+                    <div class="form-group">
+                        <label for="siteTitle">Site Başlığı</label>
+                        <input type="text" id="siteTitle" name="siteTitle" value="Düğün Servisi - Lüks Araçlar, Uygun Fiyat, Profesyonel Şoförler" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="siteDescription">Site Açıklaması</label>
+                        <textarea id="siteDescription" name="siteDescription" rows="3" required>Düğün Servisi - İstanbul'da güvenilir araç kiralama hizmeti</textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="siteLogo">Site Logo</label>
+                        <input type="file" id="siteLogo" name="siteLogo" accept="image/*">
+                        <small>Önerilen boyut: 200x80px</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="primaryColor">Ana Renk</label>
+                        <input type="color" id="primaryColor" name="primaryColor" value="#2563eb">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="secondaryColor">İkincil Renk</label>
+                        <input type="color" id="secondaryColor" name="secondaryColor" value="#667eea">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i>
+                        Kaydet
+                    </button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Edit Modals -->
+    
+    <!-- Team Member Edit Modal -->
+    <div id="teamEditModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Ekip Üyesi Düzenle</h3>
+                <span class="close" onclick="closeModal('teamEditModal')">&times;</span>
+            </div>
+            <form id="teamEditForm" class="modal-form">
+                <div class="form-group">
+                    <label for="editTeamName">Ad Soyad</label>
+                    <input type="text" id="editTeamName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="editTeamRole">Pozisyon</label>
+                    <input type="text" id="editTeamRole" name="role" required>
+                </div>
+                <div class="form-group">
+                    <label for="editTeamDescription">Açıklama</label>
+                    <textarea id="editTeamDescription" name="description" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editTeamImage">Profil Resmi</label>
+                    <input type="file" id="editTeamImage" name="image" accept="image/*">
+                    <div class="current-image" id="currentTeamImage"></div>
+                </div>
+                <div class="form-group">
+                    <label for="editTeamExperience">Deneyim (Yıl)</label>
+                    <input type="number" id="editTeamExperience" name="experience" min="0" max="50">
+                </div>
+                <div class="form-group">
+                    <label for="editTeamEmail">E-posta</label>
+                    <input type="email" id="editTeamEmail" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="editTeamPhone">Telefon</label>
+                    <input type="tel" id="editTeamPhone" name="phone">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('teamEditModal')">İptal</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Vehicle Edit Modal -->
+    <div id="vehicleEditModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Araç Düzenle</h3>
+                <span class="close" onclick="closeModal('vehicleEditModal')">&times;</span>
+            </div>
+            <form id="vehicleEditForm" class="modal-form">
+                <div class="form-group">
+                    <label for="editVehicleName">Araç Adı</label>
+                    <input type="text" id="editVehicleName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="editVehicleBrand">Marka</label>
+                    <input type="text" id="editVehicleBrand" name="brand" required>
+                </div>
+                <div class="form-group">
+                    <label for="editVehicleModel">Model</label>
+                    <input type="text" id="editVehicleModel" name="model" required>
+                </div>
+                <div class="form-group">
+                    <label for="editVehicleYear">Yıl</label>
+                    <input type="number" id="editVehicleYear" name="year" min="2000" max="2024" required>
+                </div>
+                <div class="form-group">
+                    <label for="editVehicleCapacity">Kapasite</label>
+                    <input type="number" id="editVehicleCapacity" name="capacity" min="1" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="editVehicleDescription">Açıklama</label>
+                    <textarea id="editVehicleDescription" name="description" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editVehicleImage">Araç Resmi</label>
+                    <input type="file" id="editVehicleImage" name="image" accept="image/*">
+                    <div class="current-image" id="currentVehicleImage"></div>
+                </div>
+                <div class="form-group">
+                    <label for="editVehicleFeatures">Özellikler</label>
+                    <textarea id="editVehicleFeatures" name="features" rows="3" placeholder="Klima, WiFi, USB şarj, vb."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editVehiclePrice">Günlük Fiyat (₺)</label>
+                    <input type="number" id="editVehiclePrice" name="price" min="0" step="0.01">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('vehicleEditModal')">İptal</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Blog Post Edit Modal -->
+    <div id="blogEditModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Blog Yazısı Düzenle</h3>
+                <span class="close" onclick="closeModal('blogEditModal')">&times;</span>
+            </div>
+            <form id="blogEditForm" class="modal-form">
+                <div class="form-group">
+                    <label for="editBlogTitle">Başlık</label>
+                    <input type="text" id="editBlogTitle" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="editBlogExcerpt">Özet</label>
+                    <textarea id="editBlogExcerpt" name="excerpt" rows="2" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editBlogContent">İçerik</label>
+                    <textarea id="editBlogContent" name="content" rows="10" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editBlogImage">Kapak Resmi</label>
+                    <input type="file" id="editBlogImage" name="image" accept="image/*">
+                    <div class="current-image" id="currentBlogImage"></div>
+                </div>
+                <div class="form-group">
+                    <label for="editBlogDate">Yayın Tarihi</label>
+                    <input type="date" id="editBlogDate" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="editBlogAuthor">Yazar</label>
+                    <input type="text" id="editBlogAuthor" name="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="editBlogCategory">Kategori</label>
+                    <select id="editBlogCategory" name="category" required>
+                        <option value="servis">Servis Kiralama</option>
+                        <option value="gezi">Gezi ve Tur</option>
+                        <option value="dugun">Düğün Organizasyonu</option>
+                        <option value="genel">Genel</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('blogEditModal')">İptal</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- FAQ Edit Modal -->
+    <div id="faqEditModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>SSS Düzenle</h3>
+                <span class="close" onclick="closeModal('faqEditModal')">&times;</span>
+            </div>
+            <form id="faqEditForm" class="modal-form">
+                <div class="form-group">
+                    <label for="editFaqQuestion">Soru</label>
+                    <input type="text" id="editFaqQuestion" name="question" required>
+                </div>
+                <div class="form-group">
+                    <label for="editFaqAnswer">Cevap</label>
+                    <textarea id="editFaqAnswer" name="answer" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editFaqCategory">Kategori</label>
+                    <select id="editFaqCategory" name="category" required>
+                        <option value="genel">Genel</option>
+                        <option value="fiyat">Fiyatlandırma</option>
+                        <option value="rezervasyon">Rezervasyon</option>
+                        <option value="hizmet">Hizmet</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="editFaqOrder">Sıralama</label>
+                    <input type="number" id="editFaqOrder" name="order" min="1" value="1">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('faqEditModal')">İptal</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section Edit Modal -->
+    <div id="heroEditModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Ana Sayfa Hero Düzenle</h3>
+                <span class="close" onclick="closeModal('heroEditModal')">&times;</span>
+            </div>
+            <form id="heroEditForm" class="modal-form">
+                <div class="form-group">
+                    <label for="editHeroTitle">Ana Başlık</label>
+                    <input type="text" id="editHeroTitle" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="editHeroSubtitle">Alt Başlık</label>
+                    <textarea id="editHeroSubtitle" name="subtitle" rows="2" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editHeroImage">Arka Plan Resmi</label>
+                    <input type="file" id="editHeroImage" name="image" accept="image/*">
+                    <div class="current-image" id="currentHeroImage"></div>
+                </div>
+                <div class="form-group">
+                    <label for="editHeroButton1Text">1. Buton Metni</label>
+                    <input type="text" id="editHeroButton1Text" name="button1Text" required>
+                </div>
+                <div class="form-group">
+                    <label for="editHeroButton1Link">1. Buton Linki</label>
+                    <input type="text" id="editHeroButton1Link" name="button1Link" required>
+                </div>
+                <div class="form-group">
+                    <label for="editHeroButton2Text">2. Buton Metni</label>
+                    <input type="text" id="editHeroButton2Text" name="button2Text">
+                </div>
+                <div class="form-group">
+                    <label for="editHeroButton2Link">2. Buton Linki</label>
+                    <input type="text" id="editHeroButton2Link" name="button2Link">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('heroEditModal')">İptal</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Service Edit Modal -->
+    <div id="serviceEditModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Hizmet Düzenle</h3>
+                <span class="close" onclick="closeModal('serviceEditModal')">&times;</span>
+            </div>
+            <form id="serviceEditForm" class="modal-form">
+                <div class="form-group">
+                    <label for="editServiceName">Hizmet Adı</label>
+                    <input type="text" id="editServiceName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="editServiceIcon">İkon (Font Awesome)</label>
+                    <input type="text" id="editServiceIcon" name="icon" placeholder="fas fa-bus" required>
+                </div>
+                <div class="form-group">
+                    <label for="editServiceDescription">Açıklama</label>
+                    <textarea id="editServiceDescription" name="description" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editServiceLink">Link</label>
+                    <input type="text" id="editServiceLink" name="link" required>
+                </div>
+                <div class="form-group">
+                    <label for="editServiceImage">Hizmet Resmi</label>
+                    <input type="file" id="editServiceImage" name="image" accept="image/*">
+                    <div class="current-image" id="currentServiceImage"></div>
+                </div>
+                <div class="form-group">
+                    <label for="editServiceFeatures">Özellikler</label>
+                    <textarea id="editServiceFeatures" name="features" rows="3" placeholder="Her satıra bir özellik"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="editServicePrice">Başlangıç Fiyatı (₺)</label>
+                    <input type="number" id="editServicePrice" name="price" min="0" step="0.01">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('serviceEditModal')">İptal</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html> 

@@ -1,0 +1,133 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belgrad Turu ve Doğa Gezileri - Servis Aracım</title>
+    @Html.Action("Head", "Partial")
+    <link href="~/Content/blog.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Header -->
+    @Html.Action("Header", "Partial")
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="blog-hero-content">
+                <div class="blog-meta">
+                    <span class="blog-date">Nisan 3, 2024</span>
+                    <span class="blog-category">Ozel Turlar</span>
+                </div>
+                <h1>Belgrad Turu ve Doga Gezileri</h1>
+                <p class="blog-subtitle">Istanbul'un en guzel dogal alanlarinda profesyonel servis kiralama hizmetimizle unutulmaz turlar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image Section -->
+    <section class="hero-image">
+        <img src="~/dugunservisi/images/belgrad.png" alt="Belgrad Turu">
+    </section>
+
+    <!-- Blog Content Section -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="blog-wrapper">
+                <article class="blog-main">
+                    <div class="blog-content">
+                        <h2>Belgrad Ormani ve Polonezkoy Turlari</h2>
+                        <p>Istanbul'un nefes alan yesil alanlari olan Belgrad Ormani ve Polonezkoy, sehrin kalabaligindan uzaklasmak isteyenler icin mukemmel kacamak noktalaridir. Bu dogal guzelliklerde duzenlenen turlar icin profesyonel servis kiralama hizmetimizle konforlu ve guvenli ulasim imkani sunuyoruz.</p>
+                        
+                        <h3>Belgrad Ormani Turu</h3>
+                        <p>Istanbul'un en buyuk orman alani olan Belgrad Ormani, 5.500 hektarlik genis alaniyla doga severler icin essiz firsatlar sunar. Orman icinde:</p>
+                        <ul>
+                            <li>Yuruyus parkurlari ve bisiklet yollari</li>
+                            <li>Gol ve goletler</li>
+                            <li>Piknik alanlari ve mangal yerleri</li>
+                            <li>Doga fotografciligi imkanlari</li>
+                            <li>Kus gozlem noktalari</li>
+                        </ul>
+                        
+                        <h3>Polonezkoy Turu</h3>
+                        <p>Istanbul'un en guzel koylerinden biri olan Polonezkoy, dogal guzellikleri ve tarihi dokusuyla dikkat ceker. Koyde:</p>
+                        <ul>
+                            <li>Tarihi Polonya evleri</li>
+                            <li>Dogal yuruyus rotalari</li>
+                            <li>Organik tarim alanlari</li>
+                            <li>Geleneksel Polonya mutfagi</li>
+                            <li>Manzara noktalari</li>
+                        </ul>
+                        
+                        <div class="info-card">
+                            <h4>Servis Kiralama Avantajlarimiz</h4>
+                            <p>Doga turlariniz icin sundugumuz servis kiralama hizmetimizde:</p>
+                            <ul>
+                                <li><strong>Konforlu Araclar:</strong> Klimali, genis koltuklu modern araclar</li>
+                                <li><strong>Deneyimli Soforler:</strong> Bolgeyi iyi bilen, guvenli surus yapan profesyoneller</li>
+                                <li><strong>Esnek Program:</strong> Cikis ve donus saatlerinde esneklik</li>
+                                <li><strong>Guvenlik:</strong> Tum araclarimiz kapsamli sigorta ile korunmaktadir</li>
+                                <li><strong>Ek Hizmetler:</strong> Rehberlik, fotograf cekimi gibi ek hizmetler</li>
+                            </ul>
+                        </div>
+                        
+                        <h3>Tur Programlari</h3>
+                        <p>Size ozel hazirladigimiz tur programlari:</p>
+                        
+                        <h4>Gunubirlik Belgrad Ormani Turu</h4>
+                        <ul>
+                            <li>Sabah 08:00'da bulusma</li>
+                            <li>Belgrad Ormani'na transfer</li>
+                            <li>Orman ici yuruyus ve piknik</li>
+                            <li>Gol kenarinda dinlenme</li>
+                            <li>Aksam 18:00'da donus</li>
+                        </ul>
+                        
+                        <h4>Polonezkoy Doga Turu</h4>
+                        <ul>
+                            <li>Sabah 09:00'da bulusma</li>
+                            <li>Polonezkoy'e transfer</li>
+                            <li>Koy turu ve tarihi evleri ziyaret</li>
+                            <li>Dogal yuruyus rotalarinda yuruyus</li>
+                            <li>Geleneksel yemek molasi</li>
+                            <li>Aksam 19:00'da donus</li>
+                        </ul>
+                        
+
+                    </div>
+                </article>
+                
+                <aside class="blog-sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Diger Blog Yazilari</h3>
+                        <ul class="related-posts">
+                            <li><a href="~/Home/BlogDugunMisafir">Dugun Misafir Tasimaciligi</a></li>
+                            <li><a href="~/Home/BlogKurumsalEtkinlik">Kurumsal Etkinlik Transferleri</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3>Hizli Iletisim</h3>
+                        <div class="contact-info">
+                            <p><i class="fas fa-phone"></i> <a href="tel:05388982837">0(538)8982837</a></p>
+                            <p><i class="fas fa-envelope"></i> info@servisaracim.com</p>
+                            <p><i class="fas fa-clock"></i> 7/24 Hizmet</p>
+                        </div>
+                        <a href="tel:05388982837" class="btn-blog w-100 text-center">Hemen Ara</a>
+                    </div>
+                    
+
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    @Html.Action("FooterHizmetlerimiz", "Partial")
+
+    <script src="~/dugunservisi/dugunservisi.js"></script>
+</body>
+</html>

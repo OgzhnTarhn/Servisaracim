@@ -1,0 +1,153 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkimizda - Servis Aracim</title>
+    @Html.Action("Head", "Partial")
+    <link href="~/dugunservisi/hakkimizda.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Header -->
+    @Html.Action("Header", "Partial")
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hakkimizda</h1>
+                <p class="hero-description">
+                    20 yili askin deneyimimizle Istanbul'da guvenilir arac kiralama hizmeti sunuyoruz.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Biz Kimiz?</h2>
+                    <p class="about-description">
+                        Dugun Servisi olarak, 2004 yilindan bu yana Istanbul'da arac kiralama sektorunde hizmet vermekteyiz. 
+                        Musteri memnuniyetini on planda tutarak, kaliteli ve guvenilir hizmet anlayisimizla sektorde oncu konumda yer almaktayiz.
+                    </p>
+                    <p class="about-description">
+                        Deneyimli sofor kadromuz, modern arac filomuz ve musteri odakli yaklasimimizla, 
+                        dugun, nisan, kina, gezi, tur ve kurumsal etkinlikleriniz icin profesyonel ulasim cozumleri sunuyoruz.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Yillik Deneyim</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Mutlu Musteri</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Arac Filosu</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Hizmet</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="~/dugunservisi/images/team-1.jpg" alt="Ekibimiz" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values">
+        <div class="container">
+            <h2 class="section-title">Degerlerimiz</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Guvenlik</h3>
+                    <p>Musterilerimizin guvenligi bizim icin her seyden onemlidir. Tum araclarimiz kapsamli sigorta ile korunmaktadir.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Zamaninda Hizmet</h3>
+                    <p>Zamaninda cikis ve varis garantisi veriyoruz. Musterilerimizin programlarini aksatmamaya ozen gosteriyoruz.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Kalite</h3>
+                    <p>Modern ve bakimli araclarimizla en yuksek kalitede hizmet sunuyoruz.</p>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Musteri Memnuniyeti</h3>
+                    <p>Musteri memnuniyeti bizim icin en buyuk basari kriteridir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title">Ekibimiz</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="~/dugunservisi/images/team-1.jpg" alt="Ekip Uyesi" class="team-img">
+                    <h3>Ahmet Yilmaz</h3>
+                    <p>Genel Mudur</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="~/dugunservisi/images/team-2.jpg" alt="Ekip Uyesi" class="team-img">
+                    <h3>Mehmet Demir</h3>
+                    <p>Operasyon Muduru</p>
+                </div>
+                
+                <div class="team-member">
+                    <img src="~/dugunservisi/images/team-3.jpg" alt="Ekip Uyesi" class="team-img">
+                    <h3>Ali Kaya</h3>
+                    <p>Filo Muduru</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Bizimle Iletisime Gecin</h2>
+                <p>Hizmetlerimiz hakkinda detayli bilgi almak icin bizimle iletisime gecin.</p>
+                <a href="tel:05388982837" class="cta-button">Hemen Ara</a>
+            </div>
+        </div>
+    </section>
+
+    @Html.Action("FooterHizmetlerimiz", "Partial")
+
+    <script src="~/dugunservisi/dugunservisi.js"></script>
+</body>
+</html>

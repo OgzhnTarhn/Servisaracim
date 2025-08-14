@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://dugunservisi.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin panel
+Disallow: /admin.html
+Disallow: /admin.css
+Disallow: /admin.js
+
+# Allow all other pages
+Allow: /*.html
+Allow: /*.css
+Allow: /*.js
+Allow: /images/ 

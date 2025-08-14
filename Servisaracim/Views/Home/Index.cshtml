@@ -1,0 +1,288 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    @Html.Action("Head", "Partial")
+
+</head>
+<body>
+    <!-- Header -->
+
+    @Html.Action("Header", "Partial")
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" style="
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;">
+                    Hayatınızın En<br>
+                    Güzel Yolculuğu,<br>
+                    Burada Başlıyor
+                </h1>
+                <p class="hero-description" style="
+    color: white;
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;">
+                    Nişan, düğün, gezi… Her organizasyon için prestijli servis çözümleri.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#teklif" class="btn btn-primary">Hemen Teklif Al</a>
+                                            <a href="~/Home/Hakkimizda" class="btn btn-secondary">Hakkımızda</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                @*<img src="/dugunservisi/images/banner.png" alt="Lüks Araç" class="hero-img">*@
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="hizmetler">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hizmetlerimiz</h2>
+                <p class="section-subtitle">İhtiyacınıza uygun araç kiralama çözümleri</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3 class="service-title">Düğün, Nişan Servis Kiralama</h3>
+                    <p class="service-description">
+                        Düğün, nişan ve özel davet organizasyonlarınızda misafirlerinizin konforlu ve zamanında ulaşımı için profesyonel servis kiralama hizmeti sunuyoruz. İstanbul içi ve çevresinde gerçekleşen etkinliklerde; gelin-damat yakınları, aile büyükleri ve davetliler için konforlu, klimalı ve geniş araçlarımızla ulaşımı sorunsuz hale getiriyoruz. Düğün salonu, kır bahçesi, otel ya da boğaz manzaralı mekânlara yapılan toplu taşıma organizasyonlarınızda hem şıklığı hem de düzeni birlikte sunuyoruz. Kalabalık misafir gruplarınızı tek araçla güvenle taşıyın, özel gününüzde ulaşım stresine yer vermeyin.
+                    </p>
+
+                    <a href="~/Home/Dugun" class="service-link">Daha Fazla <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="service-title">Piknik Organizasyon Servis Kiralama</h3>
+                    <p class="service-description">
+                        İstanbul’da Belgrad Ormanı, Polonezköy, Şile, Kilyos gibi doğayla iç içe alanlarda düzenlenen piknik, mangal ve deniz kenarı organizasyonlarınız için servis kiralama hizmeti sunuyoruz. Aile piknikleri, arkadaş grupları, okul etkinlikleri veya kurumsal doğa gezileri gibi farklı konseptlere uygun, konforlu ve klimalı araçlarımızla güvenli ulaşım sağlıyoruz. Sabahın erken saatlerinde çıkış, dönüş saatine kadar planlı ve rahat bir gün geçirmek için bizimle iletişime geçin.
+                    </p>
+
+                    <a href="~/Home/Dugun" class="service-link">Daha Fazla <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3 class="service-title">Gezi Organizasyonu Servis Kiralama</h3>
+                    <p class="service-description">
+                        İstanbul içi gezi organizasyonları için konforlu ve güvenli servis araçlarımızla hizmetinizdeyiz. Avrupa Yakası ve Anadolu Yakası'nda düzenlenen müze turları, tarihi yarımada gezileri, doğa yürüyüşleri, okul gezileri ve arkadaş grubu etkinliklerinde profesyonel ulaşım desteği sağlıyoruz. Rehberli kültür turları, boğaz hattı çevresi turları ve hafta sonu kaçamaklarınız için servis kiralama hizmetimizle keyifli bir gezi deneyimi yaşayın.
+                    </p>
+
+                    <a href="~/Home/Dugun" class="service-link">Daha Fazla <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Vehicles Section -->
+    <section class="vehicles" id="araclar">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Araç Filomuz</h2>
+                <p class="section-subtitle">Konforlu ve güvenli yolculuk için özenle seçilmiş araçlarımız</p>
+            </div>
+
+            <div class="vehicles-grid">
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="~/dugunservisi/images/sprinter.png" alt="Mercedes Sprinter">
+                    </div>
+                    <div class="vehicle-content">
+                        <h3 class="vehicle-title">Mercedes Sprinter</h3>
+                        <p class="vehicle-description">
+                            Sprinter, konforlu iç paneli ve akıllı asistanlarıyla her an güven veren profesyonel bir iş ortağı olmaya geliyor.
+                        </p>
+                        <a href="~/Home/Araclar" class="vehicle-link">Bilgi Al</a>
+                    </div>
+                </div>
+
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="~/dugunservisi/images/otogar.png" alt="Otokar Sultan S">
+                    </div>
+                    <div class="vehicle-content">
+                        <h3 class="vehicle-title">Otokar Sultan S</h3>
+                        <p class="vehicle-description">
+                            Her detayıyla şoförlerin ve yolcuların konforunu en üst seviyeye çıkarıyor. Yüksek kaliteli tasarımı ve mükemmel işlevselliği ile etkileyici bir sürüş keyfi sunuyor.
+                        </p>
+                        <a href="~/Home/Araclar1" class="vehicle-link">Bilgi Al</a>
+                    </div>
+                </div>
+
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="~/dugunservisi/images/ducato.png" alt="Fiat DUCATO ">
+                    </div>
+                    <div class="vehicle-content">
+                        <h3 class="vehicle-title">Fiat DUCATO</h3>
+                        <p class="vehicle-description">
+                            Sürücünün konforu düşünülürken, rahat yolcu koltukları, güçlü kliması, ferah iç alanı ve kesintisiz aydınlatma özelliği ile yolcuların da keyifli yolculuk yapmalarını sağlıyor.
+                        </p>
+                        <a href="~/Home/Araclar2" class="vehicle-link">Bilgi Al</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Blog</h2>
+                <p class="section-subtitle">Sektörden haberler ve faydalı bilgiler</p>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="~/dugunservisi/images/belgrad.png" alt="Belgrad Turu”">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">Nisan 3, 2024</div>
+                        <h3 class="blog-title">Belgrad Turu</h3>
+                        <p class="blog-excerpt">
+                            Belgrad Ormanı, Polonezköy gibi doğal güzelliklere yapılan  turlar için profesyonel servis kiralama hizmetimizle konforlu ve güvenli ulaşım imkanı sunuyoruz.
+                        </p>
+                        <a href="~/Home/BlogOzelTurlar" class="blog-link">Devamını Oku</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="~/dugunservisi/images/dugun.png" alt="İstanbul Servis Kiralama">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">Mart 14, 2024</div>
+                        <h3 class="blog-title">Düğün Misafir Taşımacılığı</h3>
+                        <p class="blog-excerpt">
+                            Düğün, nişan ve özel davetlerinizde misafirlerinizi zamanında ve rahat bir şekilde ulaştırmak için modern ve bakımlı araçlarımızla hizmetinizdeyiz.
+                        </p>
+                        <a href="~/Home/BlogDugunMisafir" class="blog-link">Devamını Oku</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="~/dugunservisi/images/is.png" alt="Gezi Tur Taşımacılığı">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">Şubat 16, 2024</div>
+                        <h3 class="blog-title">Kurumsal Etkinlik ve Organizasyon Transferleri</h3>
+                        <p class="blog-excerpt">
+                            Şirket toplantıları, eğitimler ve ekip aktiviteleri için güvenilir ve planlı ulaşım çözümleri sunuyoruz.
+                        </p>
+                        <a href="~/Home/BlogKurumsalEtkinlik" class="blog-link">Devamını Oku</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+                <p class="section-subtitle">Araç kiralama hizmetlerimiz hakkında merak edilenler</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Servis Kiralama Ücreti Ne Kadar?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Servis kiralama ücreti ihtiyacınız olan aracın kapasitesine ve gidilecek güzergaha göre değişkenlik göstermektedir. Detaylı fiyat bilgisi için bizimle iletişime geçebilirsiniz.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Servis Kiralama Süresinde Bir Sınır Var mı?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Servis kiralama süresi konusunda herhangi bir sınır bulunmamaktadır. Günlük, haftalık veya aylık kiralama seçeneklerimiz mevcuttur. İhtiyacınıza göre esnek çözümler sunuyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Kasko ve Sigorta Servis Kiralama Hizmeti İçerisine Dahil mi?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Evet, tüm araçlarımız kapsamlı kasko ve sigorta ile korunmaktadır. Müşterilerimizin güvenliği bizim için her şeyden önemlidir. Ekstra bir ücret talep etmiyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Servis Kiralama Sürecinde Pakete Dahil Olan Hizmetler Nelerdir?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Servis kiralama paketimizde şoför, yakıt, kasko sigortası, araç bakımı ve temizliği dahildir. Ayrıca WiFi, klima ve USB şarj noktaları gibi konfor özellikleri de sunuyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Rezervasyon İçin Ne Kadar Önceden Haber Vermeliyim?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Özellikle yoğun sezonlarda en az 1 hafta önceden rezervasyon yapmanızı öneririz. Ancak acil durumlar için müsaitlik durumuna göre aynı gün de hizmet verebiliyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Şoför Değişikliği Yapabilir miyim?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Evet, özel istekleriniz doğrultusunda şoför değişikliği yapabiliriz. Tüm şoförlerimiz deneyimli ve profesyonel kişilerdir. Önceden haber vermeniz yeterlidir.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-more">
+                <a href="~/dugunservisi/sss.html" class="btn btn-secondary">Tüm Soruları Görüntüle</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Contact Section -->
+    <!-- Footer -->
+    @Html.Action("Footer", "Partial")
+
+
+    <script src="~/dugunservisi/dugunservisi.js"></script>
+</body>
+</html> 

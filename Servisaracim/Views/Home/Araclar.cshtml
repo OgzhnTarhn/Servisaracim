@@ -1,0 +1,184 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    @Html.Action("Head", "Partial")
+</head>
+<body>
+    <!-- Header -->
+    @Html.Action("Header", "Partial")
+
+    <!-- Hero Section -->
+    <section class="hero vehicle-hero">
+        <div class="hero-bg">
+            <img src="~/dugunservisi/images/sprinter.png" alt="Mercedes Sprinter">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Mercedes Sprinter</h1>
+                <p class="hero-subtitle">Konforlu ve güvenli yolculuk için profesyonel çözüm</p>
+                <div class="hero-buttons">
+                    <a href="#details" class="btn btn-primary">Detayları Gör</a>
+                    <a href="tel:05388982837" class="btn btn-secondary">Hemen Ara</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Details -->
+    <section class="vehicle-details" id="details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-content">
+                    <h2>Araç Özellikleri</h2>
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Kapasite</h4>
+                                <p>16 Kişi</p>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-calendar"></i>
+                            <div>
+                                <h4>Model Yılı</h4>
+                                <p>2022</p>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-snowflake"></i>
+                            <div>
+                                <h4>Klima</h4>
+                                <p>Var</p>
+                            </div>
+                        </div>
+
+                        <div class="spec-item">
+                            <i class="fas fa-plug"></i>
+                            <div>
+                                <h4>USB Şarj</h4>
+                                <p>Var</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="description">
+                        <h3>Araç Açıklaması</h3>
+                        <p>Mercedes Sprinter, konforlu iç paneli ve akıllı asistanlarıyla her an güven veren profesyonel bir iş ortağı olmaya geliyor. Modern tasarımı ve gelişmiş teknolojileri ile yolcularınıza en iyi deneyimi sunar.</p>
+
+                        <h4>Öne Çıkan Özellikler:</h4>
+                        <ul>
+                            <li>16 kişilik konforlu kapasite</li>
+                            <li>Güçlü klima sistemi</li>
+                            <li>Ücretsiz WiFi bağlantısı</li>
+                            <li>USB şarj noktaları</li>
+                            <li>Deri koltuklar</li>
+                            <li>GPS navigasyon sistemi</li>
+                            <li>Güvenlik kameraları</li>
+                            <li>Deneyimli şoför</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="details-sidebar">
+                    <div class="booking-card">
+                        <h3>Hemen Rezervasyon Yap</h3>
+                        <form class="booking-form">
+                            <div class="form-group">
+                                <label for="pickup-date">Alış Tarihi</label>
+                                <input type="date" id="pickup-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="return-date">Dönüş Tarihi</label>
+                                <input type="date" id="return-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pickup-location">Alış Yeri</label>
+                                <input type="text" id="pickup-location" placeholder="Adres giriniz" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Gidilecek Yer</label>
+                                <input type="text" id="destination" placeholder="Hedef adres" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="passengers">Yolcu Sayısı</label>
+                                <select id="passengers" required>
+                                    <option value="">Seçiniz</option>
+                                    <option value="1-5">1-5 Kişi</option>
+                                    <option value="6-10">6-10 Kişi</option>
+                                    <option value="11-16">11-16 Kişi</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i class="fas fa-calendar-check"></i>
+                                Rezervasyon Yap
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>Hızlı İletişim</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:05388982837">0(538) 898 28 37</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <a href="https://wa.me/905388982837" target="_blank">WhatsApp</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:info@dugunservisi.com">info@dugunservisi.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Vehicles -->
+    <section class="related-vehicles">
+        <div class="container">
+            <h2>Diğer Araçlarımız</h2>
+            <div class="vehicles-grid">
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="~/dugunservisi/images/otogar.png" alt="Otokar Sultan S">
+                    </div>
+                    <div class="vehicle-content">
+                        <h3>Otokar Sultan S</h3>
+                        <p>28 kişilik konforlu araç</p>
+                        <a href="otokar-sultan.html" class="vehicle-link">İncele</a>
+                    </div>
+                </div>
+
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <img src="~/dugunservisi/images/ducato.png" alt="Fiat Ducato">
+                    </div>
+                    <div class="vehicle-content">
+                        <h3>Fiat Ducato</h3>
+                        <p>18 kişilik lüks araç</p>
+                        <a href="mercedes-travego.html" class="vehicle-link">İncele</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    @Html.Action("FooterHizmetlerimiz", "Partial")
+
+    <script src="~/dugunservisi/dugunservisi.js"></script>
+
+</body>
+</html> 

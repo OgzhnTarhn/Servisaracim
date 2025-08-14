@@ -1,0 +1,27 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build klasörleri
+bin/
+obj/
+Debug/
+Release/
+
+# Geçici dosyalar
+*.log
+*.tmp
+
+# Publish profilleri
+*.pubxml
+*.publishsettings
+
+# Rider / JetBrains IDE
+.idea/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
