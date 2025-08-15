@@ -526,9 +526,9 @@ body {
 }
 
 .blog-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
 }
 
 .blog-card {
@@ -537,8 +537,6 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    display: flex;
-    min-height: 300px;
 }
 
 .blog-card:hover {
@@ -547,12 +545,8 @@ body {
 }
 
 .blog-image {
-    width: 45%;
-    min-width: 300px;
+    height: 200px;
     overflow: hidden;
-    position: relative;
-    background: #f8f9fa;
-    flex-shrink: 0;
 }
 
 .blog-image img {
@@ -560,7 +554,6 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    display: block;
 }
 
 .blog-card:hover .blog-image img {
@@ -568,11 +561,7 @@ body {
 }
 
 .blog-content {
-    padding: 2.5rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 1.5rem;
 }
 
 .blog-date {
@@ -582,17 +571,16 @@ body {
 }
 
 .blog-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     color: #1f2937;
 }
 
 .blog-excerpt {
     color: #6b7280;
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
-    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .blog-link {
@@ -604,42 +592,6 @@ body {
 
 .blog-link:hover {
     color: #1d4ed8;
-}
-
-/* Responsive Blog Design */
-@media (max-width: 768px) {
-    .blog-card {
-        flex-direction: column;
-        min-height: auto;
-    }
-    
-    .blog-image {
-        width: 100%;
-        height: 250px;
-        min-width: auto;
-    }
-    
-    .blog-content {
-        padding: 2rem;
-    }
-    
-    .blog-title {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .blog-image {
-        height: 200px;
-    }
-    
-    .blog-content {
-        padding: 1.5rem;
-    }
-    
-    .blog-title {
-        font-size: 1.2rem;
-    }
 }
 
 /* Contact Section */

@@ -170,11 +170,11 @@
     <Content Include="dugunservisi\images\blog-3.jpg" />
     <Content Include="dugunservisi\images\blog-hero.jpg" />
     <Content Include="dugunservisi\images\contact-hero.jpg" />
-    <Content Include="dugunservisi\images\ducato.png" />
     <Content Include="dugunservisi\images\dugun.png" />
     <Content Include="dugunservisi\images\dugunservisi-logo.png" />
     <Content Include="dugunservisi\images\faq-hero.jpg" />
     <Content Include="dugunservisi\images\favicon.ico" />
+    <Content Include="dugunservisi\images\FıatDucato.png" />
     <Content Include="dugunservisi\images\hero-car.png" />
     <Content Include="dugunservisi\images\is.png" />
     <Content Include="dugunservisi\images\mercedes-sprinter.jpg" />

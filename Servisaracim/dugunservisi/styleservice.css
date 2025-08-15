@@ -1,6 +1,4 @@
-﻿@charset "UTF-8";
-
-/* Reset and Base Styles */
+﻿/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -183,13 +181,17 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 120px 0 80px;
-    /*background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+    padding: 100px 0 40px;
     background-image: url('/dugunservisi/images/was.jpg');
+    background-size: cover; /* Ekranı kırpsa bile doldurur */
+    background-position: center; /* Ortala */
+    background-repeat: no-repeat; /* Tekrar etme */
+    min-height: 4vh; /* Tüm ekran yüksekliği */
     color: white;
     position: relative;
     overflow: hidden;
 }
+
 
     .hero::before {
         content: '';
@@ -269,6 +271,7 @@ body {
 .hero-image {
     text-align: center;
 }
+
 
 .hero-img {
     max-width: 100%;

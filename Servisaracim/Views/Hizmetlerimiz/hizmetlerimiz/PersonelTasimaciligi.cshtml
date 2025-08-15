@@ -1,0 +1,275 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personel Taşımacılığı - Düğün Servisi</title>
+    <meta name="description" content="İstanbul'da personel taşımacılığı hizmeti. Şirketler için güvenli ve düzenli personel taşımacılığı çözümleri sunuyoruz.">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="~/dugunservisi/dugunservisi.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <span class="logo-text">Düğün Servisi</span>
+                </div>
+
+                <div class="nav-menu" id="nav-menu">
+                    <a href="~/Home/Index" class="nav-link">Ana Sayfa</a>
+                    <a href="~/Home/Hakkimizda" class="nav-link">Hakkımızda</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link active">Hizmetlerimiz <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="~/Hizmetlerimiz/Serviskiralama">Servis Kiralama</a>
+                            <a href="~/Hizmetlerimiz/MinibusKiralama">Minibüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/OtobüsKiralama">Otobüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/PersonelTasimaciligi" class="active">Personel Taşımacılığı</a>
+                            <a href="~/Hizmetlerimiz/VipTasimacilik">VIP Taşımacılık</a>
+                        </div>
+                    </div>
+                    <a href="~/Home/Index#faq" class="nav-link">SSS</a>
+                    <a href="~/Home/Index#blog" class="nav-link">Blog</a>
+                    <a href="~/Home/Index#iletisim" class="nav-link">İletişim</a>
+                </div>
+
+                <div class="nav-contact">
+                    <a href="tel:05396697850" class="phone-number">
+                        <i class="fas fa-phone"></i>
+                        0(539) 669 78 50
+                    </a>
+                </div>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero service-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Personel Taşımacılığı<br>
+                    Hizmeti
+                </h1>
+                <p class="hero-description">
+                    Şirketlerin personel taşımacılığı ihtiyaçlarını karşılamak için güvenli ve düzenli servis hizmetleri sunuyoruz. Sabit hatlar ve özel rotalar ile personelinizi güvenle taşıyoruz.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#teklif" class="btn btn-primary">Hemen Teklif Al</a>
+                    <a href="tel:05396697850" class="btn btn-secondary">Hemen Ara</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/personel-hero.jpg" alt="Personel Taşımacılığı" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-details">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-info">
+                    <h2>Personel Taşımacılığı Hizmetimiz</h2>
+                    <p>
+                        Personel taşımacılığı hizmetimiz ile şirketlerin personel ulaşım ihtiyaçlarını karşılıyoruz. Sabit hatlar, vardiyalı çalışma saatlerine uygun servisler ve özel rotalar ile personelinizi güvenle taşıyoruz.
+                    </p>
+
+                    <h3>Personel Taşımacılığı Avantajları</h3>
+                    <ul>
+                        <li>Sabit hatlar ve düzenli seferler</li>
+                        <li>Vardiyalı çalışma saatlerine uygun servisler</li>
+                        <li>Güvenli ve konforlu araçlar</li>
+                        <li>Deneyimli şoför kadrosu</li>
+                        <li>Sigorta ve kasko dahil</li>
+                        <li>7/24 müşteri hizmetleri</li>
+                        <li>Esnek rota planlaması</li>
+                        <li>Raporlama ve takip sistemi</li>
+                    </ul>
+                </div>
+
+                <div class="service-features">
+                    <h3>Hizmet Kapsamımız</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-building"></i>
+                            <h4>Şirket Servisleri</h4>
+                            <p>Sabit hatlar ve özel rotalar</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <h4>Vardiyalı Servis</h4>
+                            <p>7/24 personel taşımacılığı</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h4>Hizmet Alanı</h4>
+                            <p>Tüm İstanbul ve çevre iller</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Güvenlik</h4>
+                            <p>Sigorta ve kasko dahil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="teklif">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="contact-title">Personel Taşımacılığı Teklifi Alın</h2>
+                    <p class="contact-description">
+                        Personel taşımacılığı hizmetimiz hakkında detaylı bilgi almak ve fiyat teklifi için bizimle iletişime geçin.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>İstanbul/Türkiye</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>0(539) 669 78 50</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@dugunservisi.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Adınız Soyadınız" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" name="phone" class="form-control" placeholder="Telefon Numaranız" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="E-posta Adresiniz">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="company" class="form-control" placeholder="Şirket Adı">
+                        </div>
+
+                        <div class="form-group">
+                            <select name="service" class="form-control" required>
+                                <option value="">Hizmet Seçiniz</option>
+                                <option value="personel" selected>Personel Taşımacılığı</option>
+                                <option value="servis">Servis Kiralama</option>
+                                <option value="minibus">Minibüs Kiralama</option>
+                                <option value="otobus">Otobüs Kiralama</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" placeholder="Detaylarınızı yazın..." rows="5" maxlength="500"></textarea>
+                            <div class="char-count">0 / 500</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Teklif Al</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hizmetlerimiz</h3>
+                    <ul>
+                        <li><a href="~/Hizmetlerimiz/Serviskiralama">Servis Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/MinibusKiralama">Minibüs Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/OtobüsKiralama">Otobüs Kiralama</a></li>
+                        <li><a href="~/Hizmetlerimiz/PersonelTasimaciligi">Personel Taşımacılığı</a></li>
+                        <li><a href="~/Hizmetlerimiz/VipTasimacilik">VIP Taşımacılık</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> İstanbul/Türkiye</li>
+                        <li><i class="fas fa-phone"></i> 0(539) 669 78 50</li>
+                        <li><i class="fas fa-envelope"></i> info@dugunservisi.com</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Kurumsal</h3>
+                    <ul>
+                        <li><a href="~/Home/Hakkimizda">Hakkımızda</a></li>
+                        <li><a href="~/Home/Index#faq">Sıkça Sorulan Sorular</a></li>
+                        <li><a href="~/Blog/BlogOzelTurlar">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Telefon</h3>
+                    <div class="phone-number">0(539) 669 78 50</div>
+                    <p class="footer-description">
+                        Araç kiralama sektöründe öne çıkan ve kendini kanıtlayan firmamız, ihtiyaçlarınıza en uygun araç kiralama hizmetini; en uygun fiyatlarla, en iyi kalitede almanızı hedeflemektedir.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Düğün Servisi. Created by Kadir Teke</p>
+                    <div class="footer-links">
+                        <a href="~/Home/Kvkk">KVKK</a>
+                        <a href="~/Home/Gizlilik">Gizlilik Sözleşmesi</a>
+                        <a href="~/Home/CerezPolitikasi">Çerez Politikası</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Panel Link -->
+        <div class="admin-link">
+            <a href="admin.html" title="Admin Panel">
+                <i class="fas fa-cog"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-button">
+        <a href="https://wa.me/905396697850" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="~/dugunservisi/dugunservisi.js"></script>
+</body>
+</html> 
