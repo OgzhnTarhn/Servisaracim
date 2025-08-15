@@ -131,6 +131,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\blog.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -164,19 +165,17 @@
     <Content Include="dugunservisi\images\banner.png" />
     <Content Include="dugunservisi\images\banner1.jpg" />
     <Content Include="dugunservisi\images\banner11.png" />
-    <Content Include="dugunservisi\images\Belgrad.png" />
     <Content Include="dugunservisi\images\blog-1.jpg" />
     <Content Include="dugunservisi\images\blog-2.jpg" />
     <Content Include="dugunservisi\images\blog-3.jpg" />
     <Content Include="dugunservisi\images\blog-hero.jpg" />
     <Content Include="dugunservisi\images\contact-hero.jpg" />
-    <Content Include="dugunservisi\images\dugun.png" />
     <Content Include="dugunservisi\images\dugunservisi-logo.png" />
     <Content Include="dugunservisi\images\faq-hero.jpg" />
     <Content Include="dugunservisi\images\favicon.ico" />
     <Content Include="dugunservisi\images\FıatDucato.png" />
     <Content Include="dugunservisi\images\hero-car.png" />
-    <Content Include="dugunservisi\images\is.png" />
+    <Content Include="dugunservisi\images\isGezi.jpg" />
     <Content Include="dugunservisi\images\mercedes-sprinter.jpg" />
     <Content Include="dugunservisi\images\mercedes-travego.jpg" />
     <Content Include="dugunservisi\images\minibus-hero.jpg" />
@@ -184,6 +183,7 @@
     <Content Include="dugunservisi\images\otogar.png" />
     <Content Include="dugunservisi\images\otokar-sultan.jpg" />
     <Content Include="dugunservisi\images\personel-hero.jpg" />
+    <Content Include="dugunservisi\images\servis.png" />
     <Content Include="dugunservisi\images\sprinter.png" />
     <Content Include="dugunservisi\images\team-1.jpg" />
     <Content Include="dugunservisi\images\team-2.jpg" />
@@ -200,6 +200,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="dugunservisi\images\Belgrad.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -250,11 +251,6 @@
     <Content Include="Views\Home\KVKK.cshtml" />
     <Content Include="Views\Home\CerezPolitikasi.cshtml" />
     <Content Include="Views\Home\Gizlilik.cshtml" />
-    <Content Include="Views\Hizmetlerimiz\hizmetlerimiz\MinibusKiralama.cshtml" />
-    <Content Include="Views\Hizmetlerimiz\hizmetlerimiz\OtobüsKiralama.cshtml" />
-    <Content Include="Views\Hizmetlerimiz\hizmetlerimiz\PersonelTasimaciligi.cshtml" />
-    <Content Include="Views\Hizmetlerimiz\hizmetlerimiz\ServisKiralama.cshtml" />
-    <Content Include="Views\Hizmetlerimiz\hizmetlerimiz\VipTasimacilik.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

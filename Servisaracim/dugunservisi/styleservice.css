@@ -270,8 +270,14 @@ body {
     }
 
 .hero-image {
-    text-align: center;
+    width: 100px; /* bölümün tamamı yatayda kaplasın */
 }
+
+    .hero-image img {
+        display: block; /* ortalama boşluklarını kaldırır */
+        width: 100px; /* yatayda tamamen kaplar */
+        height: auto; /* orantıyı korur */
+    }
 
 
 .hero-img {
