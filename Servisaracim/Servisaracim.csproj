@@ -250,6 +250,11 @@
     <Content Include="Views\Home\KVKK.cshtml" />
     <Content Include="Views\Home\CerezPolitikasi.cshtml" />
     <Content Include="Views\Home\Gizlilik.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\hizmetlerimiz\MinibusKiralama.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\hizmetlerimiz\OtobüsKiralama.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\hizmetlerimiz\PersonelTasimaciligi.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\hizmetlerimiz\ServisKiralama.cshtml" />
+    <Content Include="Views\Hizmetlerimiz\hizmetlerimiz\VipTasimacilik.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

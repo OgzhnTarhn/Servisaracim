@@ -13,8 +13,49 @@
 </head>
 <body>
     <!-- Header -->
-    @Html.Action("Header", "Partial")
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <span class="logo-text">Düğün Servisi</span>
+                </div>
 
+                <div class="nav-menu" id="nav-menu">
+                    <a href="~/Home/Index" class="nav-link">Ana Sayfa</a>
+                    <a href="~/Home/Hakkimizda" class="nav-link active">Hakkımızda</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-link ">Hizmetlerimiz <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="~/Hizmetlerimiz/Serviskiralama">Servis Kiralama</a>
+                            <a href="~/Hizmetlerimiz/MinibusKiralama">Minibüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/OtobüsKiralama">Otobüs Kiralama</a>
+                            <a href="~/Hizmetlerimiz/PersonelTasimaciligi" class="active">Personel Taşımacılığı</a>
+                            <a href="~/Hizmetlerimiz/VipTasimacilik">VIP Taşımacılık</a>
+                        </div>
+                    </div>
+                    <a href="~/Home/Index#faq" class="nav-link">SSS</a>
+                    <a href="~/Home/Index#blog" class="nav-link">Blog</a>
+                    <a href="~/Home/Index#iletisim" class="nav-link">İletişim</a>
+                </div>
+
+                <div class="nav-contact">
+                    <a href="tel:05396697850" class="phone-number">
+                        <i class="fas fa-phone"></i>
+                        0(539) 669 78 50
+                    </a>
+                </div>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
@@ -34,14 +75,14 @@
                 <div class="about-text">
                     <h2 class="section-title">Biz Kimiz?</h2>
                     <p class="about-description">
-                        Dugun Servisi olarak, 2004 yilindan bu yana Istanbul'da arac kiralama sektorunde hizmet vermekteyiz. 
+                        Dugun Servisi olarak, 2004 yilindan bu yana Istanbul'da arac kiralama sektorunde hizmet vermekteyiz.
                         Musteri memnuniyetini on planda tutarak, kaliteli ve guvenilir hizmet anlayisimizla sektorde oncu konumda yer almaktayiz.
                     </p>
                     <p class="about-description">
-                        Deneyimli sofor kadromuz, modern arac filomuz ve musteri odakli yaklasimimizla, 
+                        Deneyimli sofor kadromuz, modern arac filomuz ve musteri odakli yaklasimimizla,
                         dugun, nisan, kina, gezi, tur ve kurumsal etkinlikleriniz icin profesyonel ulasim cozumleri sunuyoruz.
                     </p>
-                    
+
                     <div class="stats-grid">
                         <div class="stat-item">
                             <div class="stat-number">20+</div>
@@ -61,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="about-image">
                     <img src="~/dugunservisi/images/team-1.jpg" alt="Ekibimiz" class="about-img">
                 </div>
@@ -81,7 +122,7 @@
                     <h3>Guvenlik</h3>
                     <p>Musterilerimizin guvenligi bizim icin her seyden onemlidir. Tum araclarimiz kapsamli sigorta ile korunmaktadir.</p>
                 </div>
-                
+
                 <div class="value-item">
                     <div class="value-icon">
                         <i class="fas fa-clock"></i>
@@ -89,7 +130,7 @@
                     <h3>Zamaninda Hizmet</h3>
                     <p>Zamaninda cikis ve varis garantisi veriyoruz. Musterilerimizin programlarini aksatmamaya ozen gosteriyoruz.</p>
                 </div>
-                
+
                 <div class="value-item">
                     <div class="value-icon">
                         <i class="fas fa-star"></i>
@@ -97,7 +138,7 @@
                     <h3>Kalite</h3>
                     <p>Modern ve bakimli araclarimizla en yuksek kalitede hizmet sunuyoruz.</p>
                 </div>
-                
+
                 <div class="value-item">
                     <div class="value-icon">
                         <i class="fas fa-heart"></i>
@@ -108,33 +149,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Team Section -->
-    <section class="team">
-        <div class="container">
-            <h2 class="section-title">Ekibimiz</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="~/dugunservisi/images/team-1.jpg" alt="Ekip Uyesi" class="team-img">
-                    <h3>Ahmet Yilmaz</h3>
-                    <p>Genel Mudur</p>
-                </div>
-                
-                <div class="team-member">
-                    <img src="~/dugunservisi/images/team-2.jpg" alt="Ekip Uyesi" class="team-img">
-                    <h3>Mehmet Demir</h3>
-                    <p>Operasyon Muduru</p>
-                </div>
-                
-                <div class="team-member">
-                    <img src="~/dugunservisi/images/team-3.jpg" alt="Ekip Uyesi" class="team-img">
-                    <h3>Ali Kaya</h3>
-                    <p>Filo Muduru</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact CTA -->
     <section class="contact-cta">
         <div class="container">
