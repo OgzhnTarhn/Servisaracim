@@ -1846,8 +1846,11 @@ body {
 /* Vehicle Detail Page Styles */
 .vehicle-hero {
     height: 620px;
-    width: 100%;
+    width: 1000%;
+    background: #f8f9fa;
+    margin-bottom: 3rem;
     overflow: hidden;
+    position: relative;
 }
 
     .vehicle-hero .hero-bg img {

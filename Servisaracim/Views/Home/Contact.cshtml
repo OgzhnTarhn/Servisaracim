@@ -1,0 +1,164 @@
+
+
+<section class="parallax-contact">
+    <div class="parallax-bg"></div>
+    <div class="parallax-content">
+        <div class="container">
+            <div class="contact-parallax-content">
+                <h2 class="parallax-title">Bize Ulaşın</h2>
+                <p class="parallax-subtitle">Hemen arayın, hemen hizmet alın</p>
+                <div class="parallax-phone">
+                    <div class="phone-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="phone-info">
+                        <span class="phone-label">7/24 Hizmetinizdeyiz</span>
+                        <a href="tel:05388982837" class="phone-number-large">0(538)8982837</a>
+                    </div>
+                </div>
+                <div class="parallax-buttons">
+                    <a href="tel:05388982837" class="btn btn-call btn-large">
+                        <i class="fas fa-phone"></i>
+                        Hemen Ara
+                    </a>
+                    <a href="https://wa.me/905388982837" class="btn btn-whatsapp btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="iletisim">
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2 class="contact-title">İletişime Geçin</h2>
+                <p class="contact-description">
+                    Araç kiralama sektöründe öne çıkan ve kendini kanıtlayan firmamız, ihtiyaçlarınıza en uygun araç kiralama hizmetini; en uygun fiyatlarla, en iyi kalitede almanızı hedeflemektedir.
+                </p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <span>İstanbul/Türkiye</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-mobile-screen-button"></i>
+                        <span>0(538)8982837</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-at"></i>
+                        <span>mkucukguzel.18@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                @if (TempData["Error"] != null)
+                {
+                    <div class="alert alert-danger">
+                        @TempData["Error"]
+                    </div>
+                }
+                @if (TempData["Debug"] != null)
+                {
+                    <div class="alert alert-info">
+                        @TempData["Debug"]
+                    </div>
+                }
+                <form id="contactForm" onsubmit="sendToWhatsApp(event)">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Ad Soyad" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="E-posta Adresi" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" name="phone" class="form-control" placeholder="Telefon Numarası" required>
+                    </div>
+
+                    <div class="form-group">
+                        <select name="service" class="form-control" required>
+                            <option value="">Hizmet Seçiniz</option>
+                            <option value="servis">Servis Kiralama</option>
+                            <option value="minibus">Minibüs Kiralama</option>
+                            <option value="personel">Personel Taşımacılığı</option>
+                            <option value="otobus">Otobüs Kiralama</option>
+                            <option value="vip">VIP Taşımacılık</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder="Mesajınız..." rows="5" maxlength="180"></textarea>
+                        <div class="char-count">0 / 180</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">İletişime Geç</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+    
+    var form = event.target;
+    var formData = new FormData(form);
+    
+    var name = formData.get('name');
+    var email = formData.get('email');
+    var phone = formData.get('phone');
+    var service = formData.get('service');
+    var message = formData.get('message');
+    
+    // Hizmet adını çevir
+    var serviceNames = {
+        'servis': 'Servis Kiralama',
+        'minibus': 'Minibüs Kiralama',
+        'personel': 'Personel Taşımacılığı',
+        'otobus': 'Otobüs Kiralama',
+        'vip': 'VIP Taşımacılık'
+    };
+    
+    var serviceName = serviceNames[service] || service;
+    
+    // WhatsApp mesajını hazırla
+    var whatsappMessage = '*Yeni İletişim Talebi*\n\n' +
+        '*Ad Soyad:* ' + name + '\n' +
+        '*E-posta:* ' + email + '\n' +
+        '*Telefon:* ' + phone + '\n' +
+        '*Hizmet:* ' + serviceName + '\n';
+    
+    if (message) {
+        whatsappMessage += '*Mesaj:* ' + message + '\n';
+    }
+    
+    whatsappMessage += '\nBu mesaj Servisaracim.com web sitesinden gönderilmiştir.';
+    
+    // WhatsApp URL'ini oluştur
+    var whatsappUrl = 'https://api.whatsapp.com/send/?phone=905388982837&text=' + encodeURIComponent(whatsappMessage) + '&type=phone_number&app_absent=0';
+    
+    // WhatsApp'a yönlendir
+    window.open(whatsappUrl, '_blank');
+}
+
+// Karakter sayacı
+document.addEventListener('DOMContentLoaded', function() {
+    var textarea = document.querySelector('textarea[name="message"]');
+    var charCount = document.querySelector('.char-count');
+    
+    if (textarea && charCount) {
+        textarea.addEventListener('input', function() {
+            charCount.textContent = this.value.length + ' / 180';
+        });
+    }
+});
+</script>

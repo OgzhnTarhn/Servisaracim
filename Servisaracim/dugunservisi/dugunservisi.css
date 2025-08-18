@@ -1829,8 +1829,12 @@ body {
 
 /* Vehicle Detail Page Styles */
 .vehicle-hero {
-    height: 60vh;
-    min-height: 500px;
+    height: 620px;
+    width: 100%;
+    background: #f8f9fa;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    position: relative;
 }
 
 .vehicle-hero .hero-bg img {

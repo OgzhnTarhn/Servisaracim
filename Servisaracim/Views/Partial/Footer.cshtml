@@ -56,7 +56,7 @@
             </div>
 
             <div class="contact-form">
-                <form id="contactForm">
+                <form id="contactForm" onsubmit="sendToWhatsApp(event)">
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" placeholder="Ad Soyad" required>
                     </div>
@@ -74,9 +74,9 @@
                             <option value="">Hizmet Seçiniz</option>
                             <option value="servis">Servis Kiralama</option>
                             <option value="minibus">Minibüs Kiralama</option>
-
                             <option value="personel">Personel Taşımacılığı</option>
-
+                            <option value="otobus">Otobüs Kiralama</option>
+                            <option value="vip">VIP Taşımacılık</option>
                         </select>
                     </div>
 
@@ -88,6 +88,63 @@
                     <button type="submit" class="btn btn-primary">İletişime Geç</button>
                 </form>
             </div>
+
+            <script>
+            function sendToWhatsApp(event) {
+                event.preventDefault();
+                
+                var form = event.target;
+                var formData = new FormData(form);
+                
+                var name = formData.get('name');
+                var email = formData.get('email');
+                var phone = formData.get('phone');
+                var service = formData.get('service');
+                var message = formData.get('message');
+                
+                // Hizmet adını çevir
+                var serviceNames = {
+                    'servis': 'Servis Kiralama',
+                    'minibus': 'Minibüs Kiralama',
+                    'personel': 'Personel Taşımacılığı',
+                    'otobus': 'Otobüs Kiralama',
+                    'vip': 'VIP Taşımacılık'
+                };
+                
+                var serviceName = serviceNames[service] || service;
+                
+                // WhatsApp mesajını hazırla
+                var whatsappMessage = '*Yeni İletişim Talebi*\n\n' +
+                    '*Ad Soyad:* ' + name + '\n' +
+                    '*E-posta:* ' + email + '\n' +
+                    '*Telefon:* ' + phone + '\n' +
+                    '*Hizmet:* ' + serviceName + '\n';
+                
+                if (message) {
+                    whatsappMessage += '*Mesaj:* ' + message + '\n';
+                }
+                
+                whatsappMessage += '\nBu mesaj Servisaracim.com web sitesinden gönderilmiştir.';
+                
+                // WhatsApp URL'ini oluştur
+                var whatsappUrl = 'https://api.whatsapp.com/send/?phone=905388982837&text=' + encodeURIComponent(whatsappMessage) + '&type=phone_number&app_absent=0';
+                
+                // WhatsApp'a yönlendir
+                window.open(whatsappUrl, '_blank');
+            }
+            
+            // Karakter sayacı
+            document.addEventListener('DOMContentLoaded', function() {
+                var textarea = document.querySelector('textarea[name="message"]');
+                var charCount = document.querySelector('.char-count');
+                
+                if (textarea && charCount) {
+                    textarea.addEventListener('input', function() {
+                        charCount.textContent = this.value.length + ' / 180';
+                    });
+                }
+            });
+            </script>
         </div>
     </div>
 </section>

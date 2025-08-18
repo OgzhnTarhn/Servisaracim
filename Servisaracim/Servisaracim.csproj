@@ -129,6 +129,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\ContactVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\blog.css" />
@@ -197,6 +198,7 @@
     <Content Include="dugunservisi\sitemap.xml" />
     <Content Include="dugunservisi\sss.html" />
     <Content Include="dugunservisi\styleservice.css" />
+    <Content Include="dugunservisi\images\sprinter1.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -251,10 +253,10 @@
     <Content Include="Views\Home\KVKK.cshtml" />
     <Content Include="Views\Home\CerezPolitikasi.cshtml" />
     <Content Include="Views\Home\Gizlilik.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
