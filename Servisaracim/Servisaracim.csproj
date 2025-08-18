@@ -199,6 +199,8 @@
     <Content Include="dugunservisi\sss.html" />
     <Content Include="dugunservisi\styleservice.css" />
     <Content Include="dugunservisi\images\sprinter1.jpg" />
+    <Content Include="dugunservisi\images\Fıat1.jpg" />
+    <Content Include="dugunservisi\images\sultan1.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
