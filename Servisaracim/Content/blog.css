@@ -251,13 +251,17 @@
     }
     
     .hero-image {
-        height: 300px;
-        margin-bottom: 2rem;
+        width: 100%;
+        text-align: center;
+        margin: 2rem 0;
     }
     
     .hero-image img {
-        object-fit: contain;
-        object-position: center;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        margin: 0 auto;
     }
     
     .blog-sidebar {

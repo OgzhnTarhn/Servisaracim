@@ -200,6 +200,10 @@ body {
 }
 
 .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -220,6 +224,25 @@ body {
     opacity: 0.9;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.hero-image {
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.hero-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Section Styles */

@@ -206,9 +206,9 @@ body {
     }
 
 .hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -270,30 +270,22 @@ body {
     }
 
 .hero-image {
-    width: 100px; /* bölümün tamamı yatayda kaplasın */
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
 }
 
-    .hero-image img {
-        display: block; /* ortalama boşluklarını kaldırır */
-        width: 100px; /* yatayda tamamen kaplar */
-        height: auto; /* orantıyı korur */
-    }
-
+.hero-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    margin: 0 auto;
+}
 
 .hero-img {
     max-width: 100%;
     height: auto;
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
 }
 
 /* Section Styles */
@@ -1135,7 +1127,8 @@ body {
         right: 0;
         width: 40%;
         height: 100%;
-        background: url('images/hero-car.png') no-repeat right center;
+
+      /*  background-image: url('images/servisaracim.png');*/
         background-size: contain;
         opacity: 0.1;
         z-index: 1;

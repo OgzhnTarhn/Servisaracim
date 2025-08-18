@@ -175,16 +175,15 @@
     <Content Include="dugunservisi\images\faq-hero.jpg" />
     <Content Include="dugunservisi\images\favicon.ico" />
     <Content Include="dugunservisi\images\FıatDucato.png" />
-    <Content Include="dugunservisi\images\hero-car.png" />
     <Content Include="dugunservisi\images\isGezi.jpg" />
     <Content Include="dugunservisi\images\mercedes-sprinter.jpg" />
     <Content Include="dugunservisi\images\mercedes-travego.jpg" />
     <Content Include="dugunservisi\images\minibus-hero.jpg" />
     <Content Include="dugunservisi\images\otobus-hero.jpg" />
     <Content Include="dugunservisi\images\otogar.png" />
-    <Content Include="dugunservisi\images\otokar-sultan.jpg" />
     <Content Include="dugunservisi\images\personel-hero.jpg" />
     <Content Include="dugunservisi\images\servis.png" />
+    <Content Include="dugunservisi\images\servisaracim.png" />
     <Content Include="dugunservisi\images\sprinter.png" />
     <Content Include="dugunservisi\images\team-1.jpg" />
     <Content Include="dugunservisi\images\team-2.jpg" />
