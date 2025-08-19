@@ -1827,7 +1827,7 @@ body {
 
 /* Vehicle Detail Page Styles */
 .vehicle-hero {
-    height: 620px;
+    height: 500px; /* 620px'den 500px'e düşürdüm */
     width: 100%;
     background: #f8f9fa;
     margin-bottom: 3rem;
@@ -1835,10 +1835,93 @@ body {
     position: relative;
 }
 
+.vehicle-hero .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
 .vehicle-hero .hero-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center; /* Fotoğrafı ortala */
+    display: block;
+    max-height: 500px; /* Maksimum yükseklik sınırı */
+}
+
+.vehicle-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Biraz daha koyu overlay */
+    z-index: 2;
+}
+
+.vehicle-hero .hero-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    padding-top: 150px; /* 200px'den 150px'e düşürdüm */
+}
+
+.vehicle-hero .hero-title {
+    font-size: 3rem; /* 3.5rem'den 3rem'e düşürdüm */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Metin gölgesi */
+}
+
+.vehicle-hero .hero-subtitle {
+    font-size: 1.2rem; /* 1.3rem'den 1.2rem'e düşürdüm */
+    margin-bottom: 2rem;
+    color: white;
+    opacity: 0.95;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* Metin gölgesi */
+}
+
+/* Responsive Design for Vehicle Hero */
+@media (max-width: 768px) {
+    .vehicle-hero {
+        height: 350px; /* 400px'den 350px'e düşürdüm */
+    }
+    
+    .vehicle-hero .hero-content {
+        padding-top: 100px; /* 120px'den 100px'e düşürdüm */
+    }
+    
+    .vehicle-hero .hero-title {
+        font-size: 2.2rem; /* 2.5rem'den 2.2rem'e düşürdüm */
+    }
+    
+    .vehicle-hero .hero-subtitle {
+        font-size: 1rem; /* 1.1rem'den 1rem'e düşürdüm */
+    }
+}
+
+@media (max-width: 480px) {
+    .vehicle-hero {
+        height: 250px; /* 300px'den 250px'e düşürdüm */
+    }
+    
+    .vehicle-hero .hero-content {
+        padding-top: 60px; /* 80px'den 60px'e düşürdüm */
+    }
+    
+    .vehicle-hero .hero-title {
+        font-size: 1.8rem; /* 2rem'den 1.8rem'e düşürdüm */
+    }
+    
+    .vehicle-hero .hero-subtitle {
+        font-size: 0.9rem; /* 1rem'den 0.9rem'e düşürdüm */
+    }
 }
 
 .vehicle-details {
